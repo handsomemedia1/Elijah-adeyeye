@@ -1,0 +1,1568 @@
+--- Block at line 599 ---
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Testimonials</h2>
+                <p class="section-subtitle">What People Say About My Work</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah Adeyeye is an exception Researcher with excellent skills in understanding depth and delivery of service having worked together for years now.
+
+                            I can say he is the best at what he does</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-1.jpg" alt="Awolowo Olaoluwa">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Awolowo Olaoluwa</h4>
+                                <p class="author-position">Adolescent and Youth Counsellor, Life Counselling Initiative.</p>
+                            </div>
+--- Block at line 600 ---
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Testimonials</h2>
+                <p class="section-subtitle">What People Say About My Work</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah Adeyeye is an exception Researcher with excellent skills in understanding depth and delivery of service having worked together for years now.
+
+                            I can say he is the best at what he does</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-1.jpg" alt="Awolowo Olaoluwa">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Awolowo Olaoluwa</h4>
+                                <p class="author-position">Adolescent and Youth Counsellor, Life Counselling Initiative.</p>
+                            </div>
+                        </div>
+--- Block at line 601 ---
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Testimonials</h2>
+                <p class="section-subtitle">What People Say About My Work</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah Adeyeye is an exception Researcher with excellent skills in understanding depth and delivery of service having worked together for years now.
+
+                            I can say he is the best at what he does</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-1.jpg" alt="Awolowo Olaoluwa">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Awolowo Olaoluwa</h4>
+                                <p class="author-position">Adolescent and Youth Counsellor, Life Counselling Initiative.</p>
+                            </div>
+                        </div>
+                    </div>
+--- Block at line 604 ---
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Testimonials</h2>
+                <p class="section-subtitle">What People Say About My Work</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah Adeyeye is an exception Researcher with excellent skills in understanding depth and delivery of service having worked together for years now.
+
+                            I can say he is the best at what he does</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-1.jpg" alt="Awolowo Olaoluwa">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Awolowo Olaoluwa</h4>
+                                <p class="author-position">Adolescent and Youth Counsellor, Life Counselling Initiative.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+--- Block at line 607 ---
+    <section class="testimonials section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Testimonials</h2>
+                <p class="section-subtitle">What People Say About My Work</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah Adeyeye is an exception Researcher with excellent skills in understanding depth and delivery of service having worked together for years now.
+
+                            I can say he is the best at what he does</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-1.jpg" alt="Awolowo Olaoluwa">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Awolowo Olaoluwa</h4>
+                                <p class="author-position">Adolescent and Youth Counsellor, Life Counselling Initiative.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+--- Block at line 609 ---
+            <div class="section-header">
+                <h2 class="section-title">Testimonials</h2>
+                <p class="section-subtitle">What People Say About My Work</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah Adeyeye is an exception Researcher with excellent skills in understanding depth and delivery of service having worked together for years now.
+
+                            I can say he is the best at what he does</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-1.jpg" alt="Awolowo Olaoluwa">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Awolowo Olaoluwa</h4>
+                                <p class="author-position">Adolescent and Youth Counsellor, Life Counselling Initiative.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">I won't lie you make me to have more interest in carrying out research on my own, with the way you make corrections if there's any point to be corrected and perform many task like it's nothing really impressed me so much 
+
+--- Block at line 618 ---
+                        </div>
+                        <p class="testimonial-text">Elijah Adeyeye is an exception Researcher with excellent skills in understanding depth and delivery of service having worked together for years now.
+
+                            I can say he is the best at what he does</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-1.jpg" alt="Awolowo Olaoluwa">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Awolowo Olaoluwa</h4>
+                                <p class="author-position">Adolescent and Youth Counsellor, Life Counselling Initiative.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">I won't lie you make me to have more interest in carrying out research on my own, with the way you make corrections if there's any point to be corrected and perform many task like it's nothing really impressed me so much 
+
+                            To let you know how effective your service is, I am truly impressed and make me want to challenge myself! 
+                            
+                            Well done boss 🙇‍♂
+                            </p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-2.jpg" alt="AbdulRasheed Sodiq O.">
+                            </div>
+                            <div class="author-info">
+--- Block at line 619 ---
+                        <p class="testimonial-text">Elijah Adeyeye is an exception Researcher with excellent skills in understanding depth and delivery of service having worked together for years now.
+
+                            I can say he is the best at what he does</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-1.jpg" alt="Awolowo Olaoluwa">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Awolowo Olaoluwa</h4>
+                                <p class="author-position">Adolescent and Youth Counsellor, Life Counselling Initiative.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">I won't lie you make me to have more interest in carrying out research on my own, with the way you make corrections if there's any point to be corrected and perform many task like it's nothing really impressed me so much 
+
+                            To let you know how effective your service is, I am truly impressed and make me want to challenge myself! 
+                            
+                            Well done boss 🙇‍♂
+                            </p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-2.jpg" alt="AbdulRasheed Sodiq O.">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">AbdulRasheed Sodiq O.</h4>
+--- Block at line 620 ---
+
+                            I can say he is the best at what he does</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-1.jpg" alt="Awolowo Olaoluwa">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Awolowo Olaoluwa</h4>
+                                <p class="author-position">Adolescent and Youth Counsellor, Life Counselling Initiative.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">I won't lie you make me to have more interest in carrying out research on my own, with the way you make corrections if there's any point to be corrected and perform many task like it's nothing really impressed me so much 
+
+                            To let you know how effective your service is, I am truly impressed and make me want to challenge myself! 
+                            
+                            Well done boss 🙇‍♂
+                            </p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-2.jpg" alt="AbdulRasheed Sodiq O.">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">AbdulRasheed Sodiq O.</h4>
+                                <p class="author-position">Counsellor Unique</p>
+--- Block at line 623 ---
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-1.jpg" alt="Awolowo Olaoluwa">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Awolowo Olaoluwa</h4>
+                                <p class="author-position">Adolescent and Youth Counsellor, Life Counselling Initiative.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">I won't lie you make me to have more interest in carrying out research on my own, with the way you make corrections if there's any point to be corrected and perform many task like it's nothing really impressed me so much 
+
+                            To let you know how effective your service is, I am truly impressed and make me want to challenge myself! 
+                            
+                            Well done boss 🙇‍♂
+                            </p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-2.jpg" alt="AbdulRasheed Sodiq O.">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">AbdulRasheed Sodiq O.</h4>
+                                <p class="author-position">Counsellor Unique</p>
+                            </div>
+                        </div>
+                    </div>
+--- Block at line 629 ---
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">I won't lie you make me to have more interest in carrying out research on my own, with the way you make corrections if there's any point to be corrected and perform many task like it's nothing really impressed me so much 
+
+                            To let you know how effective your service is, I am truly impressed and make me want to challenge myself! 
+                            
+                            Well done boss 🙇‍♂
+                            </p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-2.jpg" alt="AbdulRasheed Sodiq O.">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">AbdulRasheed Sodiq O.</h4>
+                                <p class="author-position">Counsellor Unique</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+--- Block at line 631 ---
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">I won't lie you make me to have more interest in carrying out research on my own, with the way you make corrections if there's any point to be corrected and perform many task like it's nothing really impressed me so much 
+
+                            To let you know how effective your service is, I am truly impressed and make me want to challenge myself! 
+                            
+                            Well done boss 🙇‍♂
+                            </p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-2.jpg" alt="AbdulRasheed Sodiq O.">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">AbdulRasheed Sodiq O.</h4>
+                                <p class="author-position">Counsellor Unique</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">As a student in Elijah's cybersecurity program at Elitech Hub, I gained not just technical skills but a completely new way of thinking about security. His behavioral approach to cybersecurity has been invaluable in my career.</p>
+                        <div class="testimonial-author">
+--- Block at line 640 ---
+                            To let you know how effective your service is, I am truly impressed and make me want to challenge myself! 
+                            
+                            Well done boss 🙇‍♂
+                            </p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-2.jpg" alt="AbdulRasheed Sodiq O.">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">AbdulRasheed Sodiq O.</h4>
+                                <p class="author-position">Counsellor Unique</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">As a student in Elijah's cybersecurity program at Elitech Hub, I gained not just technical skills but a completely new way of thinking about security. His behavioral approach to cybersecurity has been invaluable in my career.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-3.jpg" alt="Folake Adebayo">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Folake Adebayo</h4>
+                                <p class="author-position">Security Analyst, Technology reserve Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+--- Block at line 641 ---
+                            
+                            Well done boss 🙇‍♂
+                            </p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-2.jpg" alt="AbdulRasheed Sodiq O.">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">AbdulRasheed Sodiq O.</h4>
+                                <p class="author-position">Counsellor Unique</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">As a student in Elijah's cybersecurity program at Elitech Hub, I gained not just technical skills but a completely new way of thinking about security. His behavioral approach to cybersecurity has been invaluable in my career.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-3.jpg" alt="Folake Adebayo">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Folake Adebayo</h4>
+                                <p class="author-position">Security Analyst, Technology reserve Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+--- Block at line 642 ---
+                            Well done boss 🙇‍♂
+                            </p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-2.jpg" alt="AbdulRasheed Sodiq O.">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">AbdulRasheed Sodiq O.</h4>
+                                <p class="author-position">Counsellor Unique</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">As a student in Elijah's cybersecurity program at Elitech Hub, I gained not just technical skills but a completely new way of thinking about security. His behavioral approach to cybersecurity has been invaluable in my career.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-3.jpg" alt="Folake Adebayo">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Folake Adebayo</h4>
+                                <p class="author-position">Security Analyst, Technology reserve Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+--- Block at line 645 ---
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-2.jpg" alt="AbdulRasheed Sodiq O.">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">AbdulRasheed Sodiq O.</h4>
+                                <p class="author-position">Counsellor Unique</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">As a student in Elijah's cybersecurity program at Elitech Hub, I gained not just technical skills but a completely new way of thinking about security. His behavioral approach to cybersecurity has been invaluable in my career.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-3.jpg" alt="Folake Adebayo">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Folake Adebayo</h4>
+                                <p class="author-position">Security Analyst, Technology reserve Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+--- Block at line 646 ---
+                                <img src="assets/images/testimonials/testimonial-2.jpg" alt="AbdulRasheed Sodiq O.">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">AbdulRasheed Sodiq O.</h4>
+                                <p class="author-position">Counsellor Unique</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">As a student in Elijah's cybersecurity program at Elitech Hub, I gained not just technical skills but a completely new way of thinking about security. His behavioral approach to cybersecurity has been invaluable in my career.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-3.jpg" alt="Folake Adebayo">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Folake Adebayo</h4>
+                                <p class="author-position">Security Analyst, Technology reserve Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+--- Block at line 648 ---
+                            <div class="author-info">
+                                <h4 class="author-name">AbdulRasheed Sodiq O.</h4>
+                                <p class="author-position">Counsellor Unique</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">As a student in Elijah's cybersecurity program at Elitech Hub, I gained not just technical skills but a completely new way of thinking about security. His behavioral approach to cybersecurity has been invaluable in my career.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-3.jpg" alt="Folake Adebayo">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Folake Adebayo</h4>
+                                <p class="author-position">Security Analyst, Technology reserve Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah Adeyeye Sir, demonstrates a rare blend of passion, discipline, and curiosity that defines a promising cybersecurity professional. His dedication to mastering both technical and strategic aspects of cybersecurity is evident in every project he undertakes. Elijah Adeyeye Sir services reflect a commitment to excellence, thorough research, and practical problem solving.
+                            As a cybersecurity mentee under the mentorship of Elijah Adeyeye Sir, I, Umar Abba, go beyond just teaching; he empowers others with the mindset and tools needed to think critically, act ethically, and adapt in an ever-evolving threat landscape. His ability to simplify complex concepts while staying current with industry trends makes him a valuable guide for those entering the field.
+--- Block at line 657 ---
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">As a student in Elijah's cybersecurity program at Elitech Hub, I gained not just technical skills but a completely new way of thinking about security. His behavioral approach to cybersecurity has been invaluable in my career.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-3.jpg" alt="Folake Adebayo">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Folake Adebayo</h4>
+                                <p class="author-position">Security Analyst, Technology reserve Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah Adeyeye Sir, demonstrates a rare blend of passion, discipline, and curiosity that defines a promising cybersecurity professional. His dedication to mastering both technical and strategic aspects of cybersecurity is evident in every project he undertakes. Elijah Adeyeye Sir services reflect a commitment to excellence, thorough research, and practical problem solving.
+                            As a cybersecurity mentee under the mentorship of Elijah Adeyeye Sir, I, Umar Abba, go beyond just teaching; he empowers others with the mindset and tools needed to think critically, act ethically, and adapt in an ever-evolving threat landscape. His ability to simplify complex concepts while staying current with industry trends makes him a valuable guide for those entering the field.
+                            Elijah Adeyeye Sir drive to make a real impact in cybersecurity is not only admirable, it's inspiring.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-4.jpg" alt="Umar Abba                                ">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Umar Abba</h4>
+                                <p class="author-position">Cyber security/Forensics Analyst</p>
+                            </div>
+--- Block at line 658 ---
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">As a student in Elijah's cybersecurity program at Elitech Hub, I gained not just technical skills but a completely new way of thinking about security. His behavioral approach to cybersecurity has been invaluable in my career.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-3.jpg" alt="Folake Adebayo">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Folake Adebayo</h4>
+                                <p class="author-position">Security Analyst, Technology reserve Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah Adeyeye Sir, demonstrates a rare blend of passion, discipline, and curiosity that defines a promising cybersecurity professional. His dedication to mastering both technical and strategic aspects of cybersecurity is evident in every project he undertakes. Elijah Adeyeye Sir services reflect a commitment to excellence, thorough research, and practical problem solving.
+                            As a cybersecurity mentee under the mentorship of Elijah Adeyeye Sir, I, Umar Abba, go beyond just teaching; he empowers others with the mindset and tools needed to think critically, act ethically, and adapt in an ever-evolving threat landscape. His ability to simplify complex concepts while staying current with industry trends makes him a valuable guide for those entering the field.
+                            Elijah Adeyeye Sir drive to make a real impact in cybersecurity is not only admirable, it's inspiring.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-4.jpg" alt="Umar Abba                                ">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Umar Abba</h4>
+                                <p class="author-position">Cyber security/Forensics Analyst</p>
+                            </div>
+                        </div>
+--- Block at line 659 ---
+                        </div>
+                        <p class="testimonial-text">As a student in Elijah's cybersecurity program at Elitech Hub, I gained not just technical skills but a completely new way of thinking about security. His behavioral approach to cybersecurity has been invaluable in my career.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-3.jpg" alt="Folake Adebayo">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Folake Adebayo</h4>
+                                <p class="author-position">Security Analyst, Technology reserve Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah Adeyeye Sir, demonstrates a rare blend of passion, discipline, and curiosity that defines a promising cybersecurity professional. His dedication to mastering both technical and strategic aspects of cybersecurity is evident in every project he undertakes. Elijah Adeyeye Sir services reflect a commitment to excellence, thorough research, and practical problem solving.
+                            As a cybersecurity mentee under the mentorship of Elijah Adeyeye Sir, I, Umar Abba, go beyond just teaching; he empowers others with the mindset and tools needed to think critically, act ethically, and adapt in an ever-evolving threat landscape. His ability to simplify complex concepts while staying current with industry trends makes him a valuable guide for those entering the field.
+                            Elijah Adeyeye Sir drive to make a real impact in cybersecurity is not only admirable, it's inspiring.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-4.jpg" alt="Umar Abba                                ">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Umar Abba</h4>
+                                <p class="author-position">Cyber security/Forensics Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+--- Block at line 662 ---
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-3.jpg" alt="Folake Adebayo">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Folake Adebayo</h4>
+                                <p class="author-position">Security Analyst, Technology reserve Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah Adeyeye Sir, demonstrates a rare blend of passion, discipline, and curiosity that defines a promising cybersecurity professional. His dedication to mastering both technical and strategic aspects of cybersecurity is evident in every project he undertakes. Elijah Adeyeye Sir services reflect a commitment to excellence, thorough research, and practical problem solving.
+                            As a cybersecurity mentee under the mentorship of Elijah Adeyeye Sir, I, Umar Abba, go beyond just teaching; he empowers others with the mindset and tools needed to think critically, act ethically, and adapt in an ever-evolving threat landscape. His ability to simplify complex concepts while staying current with industry trends makes him a valuable guide for those entering the field.
+                            Elijah Adeyeye Sir drive to make a real impact in cybersecurity is not only admirable, it's inspiring.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-4.jpg" alt="Umar Abba                                ">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Umar Abba</h4>
+                                <p class="author-position">Cyber security/Forensics Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+--- Block at line 665 ---
+                            <div class="author-info">
+                                <h4 class="author-name">Folake Adebayo</h4>
+                                <p class="author-position">Security Analyst, Technology reserve Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah Adeyeye Sir, demonstrates a rare blend of passion, discipline, and curiosity that defines a promising cybersecurity professional. His dedication to mastering both technical and strategic aspects of cybersecurity is evident in every project he undertakes. Elijah Adeyeye Sir services reflect a commitment to excellence, thorough research, and practical problem solving.
+                            As a cybersecurity mentee under the mentorship of Elijah Adeyeye Sir, I, Umar Abba, go beyond just teaching; he empowers others with the mindset and tools needed to think critically, act ethically, and adapt in an ever-evolving threat landscape. His ability to simplify complex concepts while staying current with industry trends makes him a valuable guide for those entering the field.
+                            Elijah Adeyeye Sir drive to make a real impact in cybersecurity is not only admirable, it's inspiring.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-4.jpg" alt="Umar Abba                                ">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Umar Abba</h4>
+                                <p class="author-position">Cyber security/Forensics Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+--- Block at line 667 ---
+                                <p class="author-position">Security Analyst, Technology reserve Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah Adeyeye Sir, demonstrates a rare blend of passion, discipline, and curiosity that defines a promising cybersecurity professional. His dedication to mastering both technical and strategic aspects of cybersecurity is evident in every project he undertakes. Elijah Adeyeye Sir services reflect a commitment to excellence, thorough research, and practical problem solving.
+                            As a cybersecurity mentee under the mentorship of Elijah Adeyeye Sir, I, Umar Abba, go beyond just teaching; he empowers others with the mindset and tools needed to think critically, act ethically, and adapt in an ever-evolving threat landscape. His ability to simplify complex concepts while staying current with industry trends makes him a valuable guide for those entering the field.
+                            Elijah Adeyeye Sir drive to make a real impact in cybersecurity is not only admirable, it's inspiring.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-4.jpg" alt="Umar Abba                                ">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Umar Abba</h4>
+                                <p class="author-position">Cyber security/Forensics Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">I must confess that the few days of coming under your mentorship has left me better with clarity and direction than I have ever been in my Cybersecurity journey. 
+
+--- Block at line 676 ---
+                        </div>
+                        <p class="testimonial-text">Elijah Adeyeye Sir, demonstrates a rare blend of passion, discipline, and curiosity that defines a promising cybersecurity professional. His dedication to mastering both technical and strategic aspects of cybersecurity is evident in every project he undertakes. Elijah Adeyeye Sir services reflect a commitment to excellence, thorough research, and practical problem solving.
+                            As a cybersecurity mentee under the mentorship of Elijah Adeyeye Sir, I, Umar Abba, go beyond just teaching; he empowers others with the mindset and tools needed to think critically, act ethically, and adapt in an ever-evolving threat landscape. His ability to simplify complex concepts while staying current with industry trends makes him a valuable guide for those entering the field.
+                            Elijah Adeyeye Sir drive to make a real impact in cybersecurity is not only admirable, it's inspiring.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-4.jpg" alt="Umar Abba                                ">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Umar Abba</h4>
+                                <p class="author-position">Cyber security/Forensics Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">I must confess that the few days of coming under your mentorship has left me better with clarity and direction than I have ever been in my Cybersecurity journey. 
+
+                            It has always looked painful for me to completely abandon my engineering profession for my love for cybersecurity, but within a few days of coming under your mentorship, I was able to find a perfect balance between my Engineering profession and love for protecting Civilization and national critical infrastructure (ICS/OT Cybersecurity).
+                            
+                            This is just the beginning, and I look forward to seeing more of you, Sir Elijah Adeyeye. Aka Lordhandsome</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-5.jpg" alt=" Chukwuemeka Noble Odoh.">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name"> Chukwuemeka Noble Odoh.</h4>
+--- Block at line 677 ---
+                        <p class="testimonial-text">Elijah Adeyeye Sir, demonstrates a rare blend of passion, discipline, and curiosity that defines a promising cybersecurity professional. His dedication to mastering both technical and strategic aspects of cybersecurity is evident in every project he undertakes. Elijah Adeyeye Sir services reflect a commitment to excellence, thorough research, and practical problem solving.
+                            As a cybersecurity mentee under the mentorship of Elijah Adeyeye Sir, I, Umar Abba, go beyond just teaching; he empowers others with the mindset and tools needed to think critically, act ethically, and adapt in an ever-evolving threat landscape. His ability to simplify complex concepts while staying current with industry trends makes him a valuable guide for those entering the field.
+                            Elijah Adeyeye Sir drive to make a real impact in cybersecurity is not only admirable, it's inspiring.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-4.jpg" alt="Umar Abba                                ">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Umar Abba</h4>
+                                <p class="author-position">Cyber security/Forensics Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">I must confess that the few days of coming under your mentorship has left me better with clarity and direction than I have ever been in my Cybersecurity journey. 
+
+                            It has always looked painful for me to completely abandon my engineering profession for my love for cybersecurity, but within a few days of coming under your mentorship, I was able to find a perfect balance between my Engineering profession and love for protecting Civilization and national critical infrastructure (ICS/OT Cybersecurity).
+                            
+                            This is just the beginning, and I look forward to seeing more of you, Sir Elijah Adeyeye. Aka Lordhandsome</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-5.jpg" alt=" Chukwuemeka Noble Odoh.">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name"> Chukwuemeka Noble Odoh.</h4>
+                                <p class="author-position">ICS/OI Cybersecurity</p>
+--- Block at line 678 ---
+                            As a cybersecurity mentee under the mentorship of Elijah Adeyeye Sir, I, Umar Abba, go beyond just teaching; he empowers others with the mindset and tools needed to think critically, act ethically, and adapt in an ever-evolving threat landscape. His ability to simplify complex concepts while staying current with industry trends makes him a valuable guide for those entering the field.
+                            Elijah Adeyeye Sir drive to make a real impact in cybersecurity is not only admirable, it's inspiring.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-4.jpg" alt="Umar Abba                                ">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Umar Abba</h4>
+                                <p class="author-position">Cyber security/Forensics Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">I must confess that the few days of coming under your mentorship has left me better with clarity and direction than I have ever been in my Cybersecurity journey. 
+
+                            It has always looked painful for me to completely abandon my engineering profession for my love for cybersecurity, but within a few days of coming under your mentorship, I was able to find a perfect balance between my Engineering profession and love for protecting Civilization and national critical infrastructure (ICS/OT Cybersecurity).
+                            
+                            This is just the beginning, and I look forward to seeing more of you, Sir Elijah Adeyeye. Aka Lordhandsome</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-5.jpg" alt=" Chukwuemeka Noble Odoh.">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name"> Chukwuemeka Noble Odoh.</h4>
+                                <p class="author-position">ICS/OI Cybersecurity</p>
+                            </div>
+--- Block at line 681 ---
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-4.jpg" alt="Umar Abba                                ">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Umar Abba</h4>
+                                <p class="author-position">Cyber security/Forensics Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">I must confess that the few days of coming under your mentorship has left me better with clarity and direction than I have ever been in my Cybersecurity journey. 
+
+                            It has always looked painful for me to completely abandon my engineering profession for my love for cybersecurity, but within a few days of coming under your mentorship, I was able to find a perfect balance between my Engineering profession and love for protecting Civilization and national critical infrastructure (ICS/OT Cybersecurity).
+                            
+                            This is just the beginning, and I look forward to seeing more of you, Sir Elijah Adeyeye. Aka Lordhandsome</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-5.jpg" alt=" Chukwuemeka Noble Odoh.">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name"> Chukwuemeka Noble Odoh.</h4>
+                                <p class="author-position">ICS/OI Cybersecurity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+--- Block at line 686 ---
+                                <p class="author-position">Cyber security/Forensics Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">I must confess that the few days of coming under your mentorship has left me better with clarity and direction than I have ever been in my Cybersecurity journey. 
+
+                            It has always looked painful for me to completely abandon my engineering profession for my love for cybersecurity, but within a few days of coming under your mentorship, I was able to find a perfect balance between my Engineering profession and love for protecting Civilization and national critical infrastructure (ICS/OT Cybersecurity).
+                            
+                            This is just the beginning, and I look forward to seeing more of you, Sir Elijah Adeyeye. Aka Lordhandsome</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-5.jpg" alt=" Chukwuemeka Noble Odoh.">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name"> Chukwuemeka Noble Odoh.</h4>
+                                <p class="author-position">ICS/OI Cybersecurity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+--- Block at line 688 ---
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">I must confess that the few days of coming under your mentorship has left me better with clarity and direction than I have ever been in my Cybersecurity journey. 
+
+                            It has always looked painful for me to completely abandon my engineering profession for my love for cybersecurity, but within a few days of coming under your mentorship, I was able to find a perfect balance between my Engineering profession and love for protecting Civilization and national critical infrastructure (ICS/OT Cybersecurity).
+                            
+                            This is just the beginning, and I look forward to seeing more of you, Sir Elijah Adeyeye. Aka Lordhandsome</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-5.jpg" alt=" Chukwuemeka Noble Odoh.">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name"> Chukwuemeka Noble Odoh.</h4>
+                                <p class="author-position">ICS/OI Cybersecurity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">I'm truly happy to have you as my mentor, because I can't imagine an alternative to you sir. I see the practicality of your role in play, raging from the expertise of practicing your role with high professionality and so much  competence. Your method and forms of engagement has made me discover purpose with in my career of Cyber Security. I appreciate all your selfless services sir.
+                            Thank You Adeyeye Elijah @LordHandsome.</p>
+--- Block at line 697 ---
+
+                            It has always looked painful for me to completely abandon my engineering profession for my love for cybersecurity, but within a few days of coming under your mentorship, I was able to find a perfect balance between my Engineering profession and love for protecting Civilization and national critical infrastructure (ICS/OT Cybersecurity).
+                            
+                            This is just the beginning, and I look forward to seeing more of you, Sir Elijah Adeyeye. Aka Lordhandsome</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-5.jpg" alt=" Chukwuemeka Noble Odoh.">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name"> Chukwuemeka Noble Odoh.</h4>
+                                <p class="author-position">ICS/OI Cybersecurity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">I'm truly happy to have you as my mentor, because I can't imagine an alternative to you sir. I see the practicality of your role in play, raging from the expertise of practicing your role with high professionality and so much  competence. Your method and forms of engagement has made me discover purpose with in my career of Cyber Security. I appreciate all your selfless services sir.
+                            Thank You Adeyeye Elijah @LordHandsome.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-6.jpg" alt="Royal Rickson                           ">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Royal Rickson</h4>
+                                <p class="author-position">Security Analyst</p>
+                            </div>
+                        </div>
+--- Block at line 698 ---
+                            It has always looked painful for me to completely abandon my engineering profession for my love for cybersecurity, but within a few days of coming under your mentorship, I was able to find a perfect balance between my Engineering profession and love for protecting Civilization and national critical infrastructure (ICS/OT Cybersecurity).
+                            
+                            This is just the beginning, and I look forward to seeing more of you, Sir Elijah Adeyeye. Aka Lordhandsome</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-5.jpg" alt=" Chukwuemeka Noble Odoh.">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name"> Chukwuemeka Noble Odoh.</h4>
+                                <p class="author-position">ICS/OI Cybersecurity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">I'm truly happy to have you as my mentor, because I can't imagine an alternative to you sir. I see the practicality of your role in play, raging from the expertise of practicing your role with high professionality and so much  competence. Your method and forms of engagement has made me discover purpose with in my career of Cyber Security. I appreciate all your selfless services sir.
+                            Thank You Adeyeye Elijah @LordHandsome.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-6.jpg" alt="Royal Rickson                           ">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Royal Rickson</h4>
+                                <p class="author-position">Security Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+--- Block at line 699 ---
+                            
+                            This is just the beginning, and I look forward to seeing more of you, Sir Elijah Adeyeye. Aka Lordhandsome</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-5.jpg" alt=" Chukwuemeka Noble Odoh.">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name"> Chukwuemeka Noble Odoh.</h4>
+                                <p class="author-position">ICS/OI Cybersecurity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">I'm truly happy to have you as my mentor, because I can't imagine an alternative to you sir. I see the practicality of your role in play, raging from the expertise of practicing your role with high professionality and so much  competence. Your method and forms of engagement has made me discover purpose with in my career of Cyber Security. I appreciate all your selfless services sir.
+                            Thank You Adeyeye Elijah @LordHandsome.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-6.jpg" alt="Royal Rickson                           ">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Royal Rickson</h4>
+                                <p class="author-position">Security Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+--- Block at line 702 ---
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-5.jpg" alt=" Chukwuemeka Noble Odoh.">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name"> Chukwuemeka Noble Odoh.</h4>
+                                <p class="author-position">ICS/OI Cybersecurity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">I'm truly happy to have you as my mentor, because I can't imagine an alternative to you sir. I see the practicality of your role in play, raging from the expertise of practicing your role with high professionality and so much  competence. Your method and forms of engagement has made me discover purpose with in my career of Cyber Security. I appreciate all your selfless services sir.
+                            Thank You Adeyeye Elijah @LordHandsome.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-6.jpg" alt="Royal Rickson                           ">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Royal Rickson</h4>
+                                <p class="author-position">Security Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+--- Block at line 704 ---
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name"> Chukwuemeka Noble Odoh.</h4>
+                                <p class="author-position">ICS/OI Cybersecurity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">I'm truly happy to have you as my mentor, because I can't imagine an alternative to you sir. I see the practicality of your role in play, raging from the expertise of practicing your role with high professionality and so much  competence. Your method and forms of engagement has made me discover purpose with in my career of Cyber Security. I appreciate all your selfless services sir.
+                            Thank You Adeyeye Elijah @LordHandsome.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-6.jpg" alt="Royal Rickson                           ">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Royal Rickson</h4>
+                                <p class="author-position">Security Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+--- Block at line 706 ---
+                                <h4 class="author-name"> Chukwuemeka Noble Odoh.</h4>
+                                <p class="author-position">ICS/OI Cybersecurity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">I'm truly happy to have you as my mentor, because I can't imagine an alternative to you sir. I see the practicality of your role in play, raging from the expertise of practicing your role with high professionality and so much  competence. Your method and forms of engagement has made me discover purpose with in my career of Cyber Security. I appreciate all your selfless services sir.
+                            Thank You Adeyeye Elijah @LordHandsome.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-6.jpg" alt="Royal Rickson                           ">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Royal Rickson</h4>
+                                <p class="author-position">Security Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah's data analysis work for our research project exceeded all expectations. His statistical expertise combined with clear visualizations made our findings accessible to both academic and general audiences. His business analytics skills translated complex patterns into actionable insights that directly informed our organizational strategy.</p>
+                        <div class="testimonial-author">
+--- Block at line 715 ---
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">I'm truly happy to have you as my mentor, because I can't imagine an alternative to you sir. I see the practicality of your role in play, raging from the expertise of practicing your role with high professionality and so much  competence. Your method and forms of engagement has made me discover purpose with in my career of Cyber Security. I appreciate all your selfless services sir.
+                            Thank You Adeyeye Elijah @LordHandsome.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-6.jpg" alt="Royal Rickson                           ">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Royal Rickson</h4>
+                                <p class="author-position">Security Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah's data analysis work for our research project exceeded all expectations. His statistical expertise combined with clear visualizations made our findings accessible to both academic and general audiences. His business analytics skills translated complex patterns into actionable insights that directly informed our organizational strategy.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-7.jpg" alt="Prof. Emmanuel Adejumo">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Prof. Emmanuel Adejumo</h4>
+                                <p class="author-position">Research Director, Institute for Data Innovation</p>
+                            </div>
+                        </div>
+                    </div>
+--- Block at line 716 ---
+                        </div>
+                        <p class="testimonial-text">I'm truly happy to have you as my mentor, because I can't imagine an alternative to you sir. I see the practicality of your role in play, raging from the expertise of practicing your role with high professionality and so much  competence. Your method and forms of engagement has made me discover purpose with in my career of Cyber Security. I appreciate all your selfless services sir.
+                            Thank You Adeyeye Elijah @LordHandsome.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-6.jpg" alt="Royal Rickson                           ">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Royal Rickson</h4>
+                                <p class="author-position">Security Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah's data analysis work for our research project exceeded all expectations. His statistical expertise combined with clear visualizations made our findings accessible to both academic and general audiences. His business analytics skills translated complex patterns into actionable insights that directly informed our organizational strategy.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-7.jpg" alt="Prof. Emmanuel Adejumo">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Prof. Emmanuel Adejumo</h4>
+                                <p class="author-position">Research Director, Institute for Data Innovation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+--- Block at line 717 ---
+                        <p class="testimonial-text">I'm truly happy to have you as my mentor, because I can't imagine an alternative to you sir. I see the practicality of your role in play, raging from the expertise of practicing your role with high professionality and so much  competence. Your method and forms of engagement has made me discover purpose with in my career of Cyber Security. I appreciate all your selfless services sir.
+                            Thank You Adeyeye Elijah @LordHandsome.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-6.jpg" alt="Royal Rickson                           ">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Royal Rickson</h4>
+                                <p class="author-position">Security Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah's data analysis work for our research project exceeded all expectations. His statistical expertise combined with clear visualizations made our findings accessible to both academic and general audiences. His business analytics skills translated complex patterns into actionable insights that directly informed our organizational strategy.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-7.jpg" alt="Prof. Emmanuel Adejumo">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Prof. Emmanuel Adejumo</h4>
+                                <p class="author-position">Research Director, Institute for Data Innovation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+--- Block at line 720 ---
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-6.jpg" alt="Royal Rickson                           ">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Royal Rickson</h4>
+                                <p class="author-position">Security Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah's data analysis work for our research project exceeded all expectations. His statistical expertise combined with clear visualizations made our findings accessible to both academic and general audiences. His business analytics skills translated complex patterns into actionable insights that directly informed our organizational strategy.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-7.jpg" alt="Prof. Emmanuel Adejumo">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Prof. Emmanuel Adejumo</h4>
+                                <p class="author-position">Research Director, Institute for Data Innovation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+--- Block at line 721 ---
+                                <img src="assets/images/testimonials/testimonial-6.jpg" alt="Royal Rickson                           ">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Royal Rickson</h4>
+                                <p class="author-position">Security Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah's data analysis work for our research project exceeded all expectations. His statistical expertise combined with clear visualizations made our findings accessible to both academic and general audiences. His business analytics skills translated complex patterns into actionable insights that directly informed our organizational strategy.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-7.jpg" alt="Prof. Emmanuel Adejumo">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Prof. Emmanuel Adejumo</h4>
+                                <p class="author-position">Research Director, Institute for Data Innovation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+--- Block at line 723 ---
+                            <div class="author-info">
+                                <h4 class="author-name">Royal Rickson</h4>
+                                <p class="author-position">Security Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah's data analysis work for our research project exceeded all expectations. His statistical expertise combined with clear visualizations made our findings accessible to both academic and general audiences. His business analytics skills translated complex patterns into actionable insights that directly informed our organizational strategy.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-7.jpg" alt="Prof. Emmanuel Adejumo">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Prof. Emmanuel Adejumo</h4>
+                                <p class="author-position">Research Director, Institute for Data Innovation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah Adeyeye is one person I can trust with my work, and he won’t disappoint.
+I’ve seen what he can do with clean data, build high-converting landing pages, and craft personal brands that stand out. Every single time, he delivers.
+--- Block at line 732 ---
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah's data analysis work for our research project exceeded all expectations. His statistical expertise combined with clear visualizations made our findings accessible to both academic and general audiences. His business analytics skills translated complex patterns into actionable insights that directly informed our organizational strategy.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-7.jpg" alt="Prof. Emmanuel Adejumo">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Prof. Emmanuel Adejumo</h4>
+                                <p class="author-position">Research Director, Institute for Data Innovation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah Adeyeye is one person I can trust with my work, and he won’t disappoint.
+I’ve seen what he can do with clean data, build high-converting landing pages, and craft personal brands that stand out. Every single time, he delivers.
+
+His expertise and diversity in different fields are something that amazes me.
+He’s not just good at one thing; he masters them. Super talented, dedicated, hardworking and most importantly, a problem solver who cracks tough challenges like nothing.
+
+When you meet Elijah, you have met the genius who can solve your problems using code.
+Need automation? He’s got it. Need a sleek website? Done. Need data to make sense? He’ll break it down. No challenge is too big for him.
+
+If you need real solutions, Elijah is the guy.
+Fast, reliable, and always ahead of the game. Trust me, you won’t regret working with him.</p>
+--- Block at line 733 ---
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah's data analysis work for our research project exceeded all expectations. His statistical expertise combined with clear visualizations made our findings accessible to both academic and general audiences. His business analytics skills translated complex patterns into actionable insights that directly informed our organizational strategy.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-7.jpg" alt="Prof. Emmanuel Adejumo">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Prof. Emmanuel Adejumo</h4>
+                                <p class="author-position">Research Director, Institute for Data Innovation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah Adeyeye is one person I can trust with my work, and he won’t disappoint.
+I’ve seen what he can do with clean data, build high-converting landing pages, and craft personal brands that stand out. Every single time, he delivers.
+
+His expertise and diversity in different fields are something that amazes me.
+He’s not just good at one thing; he masters them. Super talented, dedicated, hardworking and most importantly, a problem solver who cracks tough challenges like nothing.
+
+When you meet Elijah, you have met the genius who can solve your problems using code.
+Need automation? He’s got it. Need a sleek website? Done. Need data to make sense? He’ll break it down. No challenge is too big for him.
+
+If you need real solutions, Elijah is the guy.
+Fast, reliable, and always ahead of the game. Trust me, you won’t regret working with him.</p>
+                        <div class="testimonial-author">
+--- Block at line 734 ---
+                        </div>
+                        <p class="testimonial-text">Elijah's data analysis work for our research project exceeded all expectations. His statistical expertise combined with clear visualizations made our findings accessible to both academic and general audiences. His business analytics skills translated complex patterns into actionable insights that directly informed our organizational strategy.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-7.jpg" alt="Prof. Emmanuel Adejumo">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Prof. Emmanuel Adejumo</h4>
+                                <p class="author-position">Research Director, Institute for Data Innovation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah Adeyeye is one person I can trust with my work, and he won’t disappoint.
+I’ve seen what he can do with clean data, build high-converting landing pages, and craft personal brands that stand out. Every single time, he delivers.
+
+His expertise and diversity in different fields are something that amazes me.
+He’s not just good at one thing; he masters them. Super talented, dedicated, hardworking and most importantly, a problem solver who cracks tough challenges like nothing.
+
+When you meet Elijah, you have met the genius who can solve your problems using code.
+Need automation? He’s got it. Need a sleek website? Done. Need data to make sense? He’ll break it down. No challenge is too big for him.
+
+If you need real solutions, Elijah is the guy.
+Fast, reliable, and always ahead of the game. Trust me, you won’t regret working with him.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+--- Block at line 737 ---
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-7.jpg" alt="Prof. Emmanuel Adejumo">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Prof. Emmanuel Adejumo</h4>
+                                <p class="author-position">Research Director, Institute for Data Innovation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah Adeyeye is one person I can trust with my work, and he won’t disappoint.
+I’ve seen what he can do with clean data, build high-converting landing pages, and craft personal brands that stand out. Every single time, he delivers.
+
+His expertise and diversity in different fields are something that amazes me.
+He’s not just good at one thing; he masters them. Super talented, dedicated, hardworking and most importantly, a problem solver who cracks tough challenges like nothing.
+
+When you meet Elijah, you have met the genius who can solve your problems using code.
+Need automation? He’s got it. Need a sleek website? Done. Need data to make sense? He’ll break it down. No challenge is too big for him.
+
+If you need real solutions, Elijah is the guy.
+Fast, reliable, and always ahead of the game. Trust me, you won’t regret working with him.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-8.jpg" alt="Ogunwale Mercy">
+                            </div>
+                            <div class="author-info">
+--- Block at line 748 ---
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah Adeyeye is one person I can trust with my work, and he won’t disappoint.
+I’ve seen what he can do with clean data, build high-converting landing pages, and craft personal brands that stand out. Every single time, he delivers.
+
+His expertise and diversity in different fields are something that amazes me.
+He’s not just good at one thing; he masters them. Super talented, dedicated, hardworking and most importantly, a problem solver who cracks tough challenges like nothing.
+
+When you meet Elijah, you have met the genius who can solve your problems using code.
+Need automation? He’s got it. Need a sleek website? Done. Need data to make sense? He’ll break it down. No challenge is too big for him.
+
+If you need real solutions, Elijah is the guy.
+Fast, reliable, and always ahead of the game. Trust me, you won’t regret working with him.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-8.jpg" alt="Ogunwale Mercy">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Ogunwale Mercy</h4>
+                                <p class="author-position">Public Health Analyst, Founder of CEE writing Services</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+--- Block at line 750 ---
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Elijah Adeyeye is one person I can trust with my work, and he won’t disappoint.
+I’ve seen what he can do with clean data, build high-converting landing pages, and craft personal brands that stand out. Every single time, he delivers.
+
+His expertise and diversity in different fields are something that amazes me.
+He’s not just good at one thing; he masters them. Super talented, dedicated, hardworking and most importantly, a problem solver who cracks tough challenges like nothing.
+
+When you meet Elijah, you have met the genius who can solve your problems using code.
+Need automation? He’s got it. Need a sleek website? Done. Need data to make sense? He’ll break it down. No challenge is too big for him.
+
+If you need real solutions, Elijah is the guy.
+Fast, reliable, and always ahead of the game. Trust me, you won’t regret working with him.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-8.jpg" alt="Ogunwale Mercy">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Ogunwale Mercy</h4>
+                                <p class="author-position">Public Health Analyst, Founder of CEE writing Services</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+--- Block at line 760 ---
+
+If you need real solutions, Elijah is the guy.
+Fast, reliable, and always ahead of the game. Trust me, you won’t regret working with him.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="assets/images/testimonials/testimonial-8.jpg" alt="Ogunwale Mercy">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Ogunwale Mercy</h4>
+                                <p class="author-position">Public Health Analyst, Founder of CEE writing Services</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Blog Section -->
+    <section class="blog section">
+        <div class="container">

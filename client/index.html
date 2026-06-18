@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elijah Adeyeye | Cybersecurity Researcher & Behavioral Scientist</title>
+    <meta name="description" content="Founder of Elitech Hub. I study how humans behave under threat — then build systems that defend against it." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://elijahadeyeye.vercel.app/" />
+    <meta property="og:title" content="Elijah Adeyeye | Cybersecurity Researcher" />
+    <meta property="og:description" content="Founder of Elitech Hub. I study how humans behave under threat — then build systems that defend against it." />
+    <meta property="og:image" content="https://elijahadeyeye.vercel.app/assets/images/profile/profile.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://elijahadeyeye.vercel.app/" />
+    <meta property="twitter:title" content="Elijah Adeyeye | Cybersecurity Researcher" />
+    <meta property="twitter:description" content="Founder of Elitech Hub. I study how humans behave under threat — then build systems that defend against it." />
+    <meta property="twitter:image" content="https://elijahadeyeye.vercel.app/assets/images/profile/profile.jpg" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Elijah Adeyeye",
+      "url": "https://elijahadeyeye.vercel.app",
+      "image": "https://elijahadeyeye.vercel.app/assets/images/profile/profile.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/elijah-adeyeye/",
+        "https://twitter.com/elijah_adeyeye"
+      ],
+      "jobTitle": "Cybersecurity Researcher",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Elitech Hub"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="initial-loader">
+      <div class="loader__orb loader__orb--1"></div>
+      <div class="loader__orb loader__orb--2"></div>
+      <div class="loader__content">
+        <div class="loader__boxes">
+          <div class="loader__box"></div>
+          <div class="loader__box"></div>
+          <div class="loader__box"></div>
+        </div>
+        <p class="loader__text">Elijah Adeyeye</p>
+      </div>
+      <style>
+        #initial-loader {
+          position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+          background: #06090e; z-index: 99999;
+          display: flex; align-items: center; justify-content: center;
+          flex-direction: column;
+          transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+          overflow: hidden;
+        }
+        .loader__orb {
+          position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.15;
+        }
+        .loader__orb--1 {
+          width: 400px; height: 400px; background: #00f0ff;
+          top: -100px; right: -50px;
+          animation: loaderFloat 6s ease-in-out infinite;
+        }
+        .loader__orb--2 {
+          width: 300px; height: 300px; background: #7b61ff;
+          bottom: -80px; left: -50px;
+          animation: loaderFloat 8s ease-in-out infinite reverse;
+        }
+        .loader__content {
+          display: flex; flex-direction: column; align-items: center; gap: 28px;
+          position: relative; z-index: 2;
+        }
+        .loader__boxes {
+          display: flex; align-items: center; gap: 8px;
+        }
+        .loader__box {
+          width: 14px; height: 14px; border-radius: 3px;
+          animation: loaderPulse 1.4s infinite ease-in-out;
+        }
+        .loader__box:nth-child(1) {
+          background: #00f0ff;
+          animation-delay: 0s;
+        }
+        .loader__box:nth-child(2) {
+          background: #7b61ff;
+          animation-delay: 0.2s;
+        }
+        .loader__box:nth-child(3) {
+          background: #00f0ff;
+          animation-delay: 0.4s;
+        }
+        .loader__text {
+          font-family: 'Outfit', sans-serif;
+          font-size: 0.85rem; font-weight: 600;
+          letter-spacing: 0.2em; text-transform: uppercase;
+          background: linear-gradient(135deg, #00f0ff 0%, #7b61ff 100%);
+          -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+          background-clip: text;
+          opacity: 0; animation: loaderFadeIn 0.8s ease forwards 0.3s;
+        }
+        @keyframes loaderPulse {
+          0%, 80%, 100% { transform: scale(1); opacity: 1; }
+          40% { transform: scale(0.4) rotate(45deg); opacity: 0.4; }
+        }
+        @keyframes loaderFloat {
+          0%, 100% { transform: translate(0, 0); }
+          50% { transform: translate(30px, -40px); }
+        }
+        @keyframes loaderFadeIn {
+          to { opacity: 1; }
+        }
+      </style>
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

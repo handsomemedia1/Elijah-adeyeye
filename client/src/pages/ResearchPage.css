@@ -1,0 +1,175 @@
+/* ══════════════════════════════════════
+   RESEARCH PAGE STYLES
+   ══════════════════════════════════════ */
+
+.interest-card {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  text-align: center;
+  transition: all var(--transition-base);
+}
+
+.interest-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow-primary);
+}
+
+.interest-card__icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-2);
+}
+
+.interest-card__title {
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+}
+
+.interest-card__desc {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  line-height: var(--leading-relaxed);
+}
+
+/* ── Projects ── */
+.research__projects {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.project-card {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.project-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.project-card__title {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+}
+
+.project-card__desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+.project-card__collab {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  flex-wrap: wrap;
+}
+
+.project-card__collab-label {
+  color: var(--text-tertiary);
+  font-weight: var(--weight-medium);
+}
+
+.project-card__institution {
+  color: var(--color-primary);
+}
+
+/* ── Collaborators ── */
+.research__collaborators {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.research__collaborators.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.collab-card {
+  padding: var(--space-8);
+  display: flex;
+  gap: var(--space-6);
+  align-items: flex-start;
+}
+
+.collab-card__avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  color: white;
+  flex-shrink: 0;
+}
+
+.collab-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.collab-card__info h3 {
+  font-size: var(--text-xl);
+}
+
+.collab-card__role {
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  font-weight: var(--weight-medium);
+}
+
+.collab-card__institution {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  font-weight: var(--weight-semibold);
+}
+
+.collab-card__desc {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  line-height: var(--leading-relaxed);
+}
+
+/* ── Philosophy ── */
+.research__philosophy {
+  padding: var(--space-10);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.research__philosophy.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.research__philosophy p {
+  margin-bottom: var(--space-4);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+}
+
+.research__cta {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .collab-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
