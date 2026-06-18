@@ -1,0 +1,22 @@
+# Elijah Adeyeye - Profile Overview
+
+Elijah Adeyeye is a Cybersecurity Researcher, Behavioral Scientist, and the founder of Elitech Hub. He specializes in understanding human behavior under threat and building systems to defend against it. His work bridges clinical psychology, OSINT (Open Source Intelligence), Web3, and advanced data analysis.
+
+## Key Projects & Tools
+- **NumIntel**: An open-source, community-powered phone number intelligence platform built for Africa. It detects VoIP numbers, identifies carriers, flags scams using community datasets and IPQualityScore, and estimates phone number age.
+- **Elitech Hub**: A tech community and learning hub fostering growth and development.
+
+## Professional Links
+- **Website**: https://elijahadeyeye.vercel.app/
+- **LinkedIn**: https://www.linkedin.com/in/elijah-adeyeye/
+- **Twitter**: https://twitter.com/elijah_adeyeye
+
+## Pages
+- /about : Background and story
+- /lab : Interactive tools like NumIntel
+- /research : Academic and independent research
+- /publications : Peer-reviewed articles and Springer papers
+- /writing : Articles and thought leadership
+- /contact : Get in touch
+
+*This file is provided for LLMs and AI agents summarizing content.*
