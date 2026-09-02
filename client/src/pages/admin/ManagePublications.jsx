@@ -16,7 +16,6 @@ export default function ManagePublications() {
   const [saving, setSaving] = useState(false);
 
   const fetchPubs = async () => {
-    setLoading(true);
     const { data } = await supabase
       .from('portfolio_publications')
       .select('*')
@@ -25,7 +24,7 @@ export default function ManagePublications() {
     setLoading(false);
   };
 
-  useEffect(() => { fetchPubs(); }, []);
+  useEffect(() => { async function load() { await fetchPubs(); } load(); }, []);
 
   const openNew = () => { setForm(EMPTY_PUB); setEditing('new'); };
   const openEdit = (pub) => { setForm({ ...pub }); setEditing(pub.id); };

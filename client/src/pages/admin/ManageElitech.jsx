@@ -8,7 +8,6 @@ export default function ManageElitech() {
   const [loading, setLoading] = useState(true);
 
   const fetchPosts = async () => {
-    setLoading(true);
     const { data } = await supabase
       .from('blog_posts')
       .select('id, title, slug, excerpt, category, author, thumbnail, published, published_at, views')
@@ -18,7 +17,7 @@ export default function ManageElitech() {
     setLoading(false);
   };
 
-  useEffect(() => { fetchPosts(); }, []);
+  useEffect(() => { async function load() { await fetchPosts(); } load(); }, []);
 
   const totalViews = posts.reduce((sum, p) => sum + (p.views || 0), 0);
 

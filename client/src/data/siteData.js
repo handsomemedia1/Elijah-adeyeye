@@ -2,9 +2,9 @@
 
 export const siteConfig = {
   name: 'Elijah Adeyeye',
-  title: 'Cybersecurity Researcher, Behavioral Scientist & Founder',
-  tagline: 'Founder of Elitech Hub · Co-Author, Springer Nature & SAGE · APA 2026 Presenter',
-  descriptor: "I study how humans behave under threat — then build systems that defend against it.",
+  title: 'AI, Behavioural & Cybersecurity Researcher',
+  tagline: 'Founder & Lead Instructor, Elitech Hub',
+  descriptor: "Researching the intersection of artificial intelligence, human behaviour, security, and high-stakes decision-making.",
   email: 'elijahadeyeye@proton.me',
   emailAlt: 'elijah@elitechub.com',
   phone: '+234 708 196 8062',
@@ -12,6 +12,7 @@ export const siteConfig = {
   github: 'handsomemedia1',
   githubUrl: 'https://github.com/handsomemedia1',
   linkedin: 'https://linkedin.com/in/adeyeye-elijah',
+  orcid: 'https://orcid.org/0009-0005-4853-7813',
   twitter: 'https://x.com/elijahadeyeye',
   telegram: 'https://t.me/Elitechub',
   threads: 'https://threads.net/@elijahadeyeye',
@@ -100,6 +101,7 @@ export const publications = [
     keywords: ['AI empathy', 'mental health', 'NLP', 'computational psychology', 'human-AI interaction'],
     citation: 'Kehinde, O., Adeyeye, E., Ayanwale, M. A., & Mojoyinola, M. O. (2026). Can AI express empathy? Computational insights from mental health dialogues. Journal of Technology in Behavioral Science. Published.',
     type: 'journal',
+    researchPillar: 'ai-evaluation',
   },
   {
     id: 'online-trauma-academic-outcomes',
@@ -116,6 +118,7 @@ export const publications = [
     keywords: ['online trauma', 'academic outcomes', 'machine learning', 'high school students', 'digital violence'],
     citation: 'Kehinde, O., & Adeyeye, E. (2026). Online trauma and its impact on academic outcomes of high school students: A machine learning analysis. Trauma, Violence, & Abuse. Manuscript ID: TVA-26-158. [Under Review].',
     type: 'journal',
+    researchPillar: 'human-behaviour',
   },
   {
     id: 'measurement-equivalence-emotional-expression',
@@ -133,6 +136,7 @@ export const publications = [
     keywords: ['emotional expression', 'AI therapy', 'measurement equivalence', 'psychometrics', 'APA'],
     citation: 'Kehinde, O., & Adeyeye, E. (2026, August). Measurement equivalence of emotional expression in AI and human therapy. Session presented at the APA 2026 Annual Convention, Washington, D.C. Abstract ID: 2316.',
     type: 'conference',
+    researchPillar: 'ai-evaluation',
     contact: 'elijahadeyeye@proton.me',
   },
 ];
@@ -387,6 +391,7 @@ export const featuredProjects = [
     tech: ['Python', 'NLP', 'Machine Learning', 'Scikit-learn'],
     github: 'https://github.com/handsomemedia1/Behavioral-Phishing-Detection',
     category: 'Cybersecurity',
+    researchPillar: 'behavioural-cybersecurity',
   },
   {
     name: 'Cross-Platform Fraud Detection System',
@@ -394,6 +399,7 @@ export const featuredProjects = [
     tech: ['PowerShell', 'SQL', 'Real-time Monitoring'],
     github: 'https://github.com/handsomemedia1/FraudAnalysis-',
     category: 'Cybersecurity',
+    researchPillar: 'ai-cybersecurity',
   },
   {
     name: 'Elitech Hub Platform',
@@ -402,30 +408,141 @@ export const featuredProjects = [
     github: 'https://github.com/handsomemedia1/Elitech-Hub',
     demo: 'https://elitech-hub.vercel.app',
     category: 'Web Dev',
+    researchPillar: null,
   },
 ];
 
 export const researchInterests = [
   {
-    title: 'Behavioral Cybersecurity',
-    description: 'Understanding the human factors that contribute to security breaches and developing interventions that address behavioral vulnerabilities in digital environments.',
-    icon: '🧠',
-  },
-  {
-    title: 'AI and Mental Health',
-    description: 'Investigating the capacity of AI systems to provide empathetic therapeutic responses and the implications for scaling mental health services globally.',
+    slug: 'ai-evaluation',
+    title: 'AI Evaluation',
+    description: 'Evaluating AI systems beyond conventional accuracy metrics, focusing on behavioral alignment, reliability, and human-like expression.',
     icon: '🤖',
+    overview: 'As artificial intelligence rapidly scales in cognitive complexity, conventional performance benchmarks (e.g., accuracy, perplexity) are no longer sufficient. My research investigates how large language models (LLMs) and autonomous agents behave in complex scenarios, evaluating their capacity for emotional expression, alignment with human behavioural norms, and reliability in critical contexts.',
+    questions: [
+      'How can AI systems be rigorously evaluated for genuine empathy versus simulated responses?',
+      'What methodologies best capture the behavioural alignment of LLMs in psychologically sensitive contexts?',
+      'What are the limitations of current natural language processing metrics when assessing human-like interaction?',
+      'How do computational agents modulate their outputs in response to varied human linguistic cues?'
+    ],
+    methods: [
+      'Computational linguistics',
+      'Natural language processing (NLP)',
+      'Comparative model evaluation',
+      'Qualitative analysis of model outputs'
+    ],
+    themes: [
+      'AI behaviour evaluation',
+      'Computational assessment of AI responses',
+      'Evaluation beyond conventional accuracy',
+      'Algorithmic empathy mapping'
+    ],
+    futureResearch: 'Developing and standardizing evaluation frameworks to measure the depth and authenticity of AI emotional expression across multicultural datasets.'
   },
   {
-    title: 'Machine Learning in Social Science',
-    description: 'Applying machine learning methodologies to social science research questions, particularly in education and trauma research.',
-    icon: '📈',
+    slug: 'human-behaviour',
+    title: 'Human Behaviour & Human Factors',
+    description: 'Investigating how human psychological traits, experiences, and decision-making processes interact with digital environments and AI systems.',
+    icon: '🧠',
+    overview: 'Human behaviour is increasingly mediated by digital interfaces and intelligent systems. This pillar explores the psychological dimensions of these interactions, focusing on how prior experiences (such as online trauma) influence cognitive outcomes, and whether traditional psychological constructs remain valid when measured in digital contexts.',
+    questions: [
+      'How does prolonged exposure to online trauma impact academic and cognitive outcomes in adolescents?',
+      'Are traditional psychological measurement scales equivalent when applied in digital or AI-mediated environments?',
+      'How do human decision-making heuristics adapt when interacting with non-human agents?',
+      'What factors predict human trust in automated or AI-driven systems?'
+    ],
+    methods: [
+      'Behavioral modelling',
+      'Statistical analysis',
+      'Psychometric evaluation',
+      'Mixed-method approaches'
+    ],
+    themes: [
+      'Human-AI interaction dynamics',
+      'Psychological impacts of digital environments',
+      'Cognitive outcomes in cyberspace',
+      'Measurement equivalence in psychology'
+    ],
+    futureResearch: 'Long-term studies on the cognitive effects of persistent human-AI collaboration and the adaptation of psychometric tools for digital-first populations.'
   },
   {
-    title: 'Human Factors in Security',
-    description: 'Studying the cognitive biases, decision-making patterns, and psychological profiles that make individuals and organizations vulnerable to cyber threats.',
-    icon: '🔒',
+    slug: 'behavioural-cybersecurity',
+    title: 'Behavioural Cybersecurity',
+    description: 'Analyzing the human element in cybersecurity, focusing on attacker behaviour, social engineering vulnerabilities, and human-centered defense mechanisms.',
+    icon: '🛡️',
+    overview: 'Despite advanced technical defenses, the human element remains the most critical vulnerability in cybersecurity. This research examines the intersection of psychology and security, analyzing how human behavioural characteristics influence susceptibility to social engineering, and studying the behavioural patterns of threat actors.',
+    questions: [
+      'How do specific human behavioural traits affect susceptibility to targeted phishing?',
+      'What behavioural patterns indicate malicious intent in cross-platform digital environments?',
+      'How can security awareness training be tailored to individual cognitive profiles?',
+      'What role does emotional manipulation play in the success of advanced persistent threats (APTs)?'
+    ],
+    methods: [
+      'Behavioral modelling',
+      'Experimental evaluation',
+      'Human-factor analysis',
+      'Threat simulation'
+    ],
+    themes: [
+      'Phishing susceptibility and cognitive biases',
+      'Social engineering mechanics',
+      'Attacker behaviour analysis',
+      'Human-centered security awareness'
+    ],
+    futureResearch: 'Developing predictive behavioural models for zero-day social engineering attacks and creating adaptive defense interfaces.'
   },
+  {
+    slug: 'ai-cybersecurity',
+    title: 'AI & Cybersecurity',
+    description: 'Exploring the intersection of artificial intelligence and cybersecurity, utilizing AI for threat detection while securing AI systems against adversarial exploitation.',
+    icon: '🔐',
+    overview: 'The integration of AI into cybersecurity represents a paradigm shift for both defenders and attackers. My research focuses on leveraging machine learning to detect complex, cross-platform fraud, while simultaneously exploring how AI systems themselves can be compromised or used to automate malicious attacks.',
+    questions: [
+      'How can AI architectures improve the detection of cross-platform fraud and behavioural anomalies?',
+      'What are the distinct behavioural indicators of AI-driven, automated phishing attacks?',
+      'How resilient are current LLMs to adversarial prompt injection and social engineering?',
+      'In what ways can machine learning models optimize digital forensics and incident response?'
+    ],
+    methods: [
+      'Machine learning applications',
+      'Statistical anomaly detection',
+      'Cybersecurity analysis',
+      'Automated threat modeling'
+    ],
+    themes: [
+      'AI-assisted threat detection',
+      'Cross-platform digital forensics',
+      'Adversarial AI vulnerabilities',
+      'Automated fraud prevention systems'
+    ],
+    futureResearch: 'Developing real-time adversarial AI mitigation strategies and creating robust behavioral signatures for AI-generated attacks.'
+  },
+  {
+    slug: 'ai-research-integrity',
+    title: 'AI & Research Integrity',
+    description: 'Examining the impact of artificial intelligence on academic publishing, research workflows, and the broader ecosystem of scholarly evaluation.',
+    icon: '📚',
+    overview: 'Generative AI is fundamentally altering the landscape of academic research. This pillar investigates the implications of AI on scholarly workflows, from data analysis to manuscript drafting, and addresses the critical need for new frameworks to maintain research integrity, evaluate contributions, and verify academic authenticity.',
+    questions: [
+      'How should academic institutions evaluate scholarly outputs that are AI-generated or AI-assisted?',
+      'What new frameworks are required to ensure research integrity in the era of pervasive LLMs?',
+      'How is AI modifying the traditional peer-review and editorial processes?',
+      'Can computational tools reliably distinguish between human-authored and AI-generated scientific prose?'
+    ],
+    methods: [
+      'Qualitative analysis of publishing trends',
+      'Comparative evaluation frameworks',
+      'Computational assessment of academic texts',
+      'Policy analysis'
+    ],
+    themes: [
+      'AI in academic publishing',
+      'Research workflows and automation',
+      'Scholarly evaluation metrics',
+      'Credentialing and academic authenticity'
+    ],
+    futureResearch: 'Establishing verifiable provenance protocols for AI-assisted academic writing and redefining authorship criteria for the AI era.'
+  }
 ];
 
 export const activeProjects = [
@@ -497,6 +614,7 @@ export const elitechPrograms = [
 export const socialLinks = [
   { name: 'LinkedIn', url: 'https://linkedin.com/in/adeyeye-elijah', icon: 'linkedin' },
   { name: 'GitHub', url: 'https://github.com/handsomemedia1', icon: 'github' },
+  { name: 'ORCID', url: 'https://orcid.org/0009-0005-4853-7813', icon: 'academic' },
   { name: 'X / Twitter', url: 'https://x.com/elijahadeyeye', icon: 'twitter' },
   { name: 'Telegram', url: 'https://t.me/Elitechub', icon: 'telegram' },
   { name: 'Threads', url: 'https://threads.net/@elijahadeyeye', icon: 'threads' },

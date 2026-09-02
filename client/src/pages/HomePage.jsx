@@ -2,15 +2,12 @@ import { useEffect, useState } from 'react';
 import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { HiArrowRight, HiExternalLink, HiStar } from 'react-icons/hi';
-import { FaGithub } from 'react-icons/fa6';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useCountUp } from '../hooks/useCountUp';
-import { useGitHubRepos } from '../hooks/useGitHubRepos';
-import { useElitechBlogs } from '../hooks/useElitechBlogs';
 import { supabase } from '../lib/supabase';
 import {
-  siteConfig, stats, publications, aboutSnippet,
-  testimonials, blogPosts, featuredProjects
+  siteConfig, publications, aboutSnippet,
+  featuredProjects, researchInterests
 } from '../data/siteData';
 import './HomePage.css';
 
@@ -39,87 +36,38 @@ function PublicationCard({ pub }) {
       <h3 className="pub-card__title">{pub.title}</h3>
       <p className="pub-card__journal">{pub.journal} — {pub.publisher}</p>
       <p className="pub-card__abstract">{pub.abstract.substring(0, 150)}...</p>
-      <Link to={`/publications`} className="pub-card__link">
+      <Link to={`/publications/${pub.slug}`} className="pub-card__link">
         Read More <HiArrowRight />
       </Link>
     </div>
   );
 }
 
-function RepoCard({ repo }) {
+function ResearchPillarCard({ pillar }) {
+  const [ref, visible] = useScrollReveal();
   return (
-    <a
-      href={repo.html_url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="repo-card glass"
-    >
-      <h4 className="repo-card__name">{repo.name}</h4>
-      <p className="repo-card__desc">{repo.description || 'No description available'}</p>
-      <div className="repo-card__meta">
-        {repo.language && (
-          <span className="repo-card__lang">
-            <span className="repo-card__lang-dot" style={{
-              background: getLanguageColor(repo.language)
-            }} />
-            {repo.language}
-          </span>
-        )}
-        {repo.stargazers_count > 0 && (
-          <span className="repo-card__stars"><HiStar /> {repo.stargazers_count}</span>
-        )}
-        <span className="repo-card__updated">
-          {getRelativeTime(repo.updated_at)}
-        </span>
-      </div>
-    </a>
+    <Link to={`/research/${pillar.slug}`} className={`research-pillar glass ${visible ? 'visible' : ''}`} ref={ref}>
+      <div className="research-pillar__icon">{pillar.icon}</div>
+      <h3 className="research-pillar__title">{pillar.title}</h3>
+      <p className="research-pillar__desc">{pillar.description}</p>
+    </Link>
   );
 }
 
-function TestimonialCard({ t }) {
+function ProjectCard({ project }) {
+  const slug = project.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
   return (
-    <div className="testimonial-card glass">
-      <p className="testimonial-card__text">"{t.content || t.text}"</p>
-      <div className="testimonial-card__author">
-        <div className="testimonial-card__avatar">
-          {t.image ? (
-            <img src={t.image} alt={t.name} style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }} />
-          ) : (
-            t.name.split(' ').map(n => n[0]).join('').substring(0, 2)
-          )}
-        </div>
-        <div>
-          <p className="testimonial-card__name">{t.name}</p>
-          <p className="testimonial-card__role">{t.role || t.title}</p>
-        </div>
+    <Link to={`/projects/${slug}`} className="project-card glass">
+      <h4 className="project-card__name">{project.name}</h4>
+      <p className="project-card__desc">{project.description}</p>
+      <div className="project-card__meta">
+        <span className="skill-tag">{project.category}</span>
       </div>
-    </div>
+    </Link>
   );
-}
-
-function getLanguageColor(lang) {
-  const colors = {
-    JavaScript: '#F7DF1E', TypeScript: '#3178C6', Python: '#3776AB',
-    HTML: '#E34F26', CSS: '#1572B6', PowerShell: '#012456', Go: '#00ADD8',
-  };
-  return colors[lang] || '#8B949E';
-}
-
-function getRelativeTime(date) {
-  const diff = Date.now() - new Date(date).getTime();
-  const days = Math.floor(diff / 86400000);
-  if (days === 0) return 'Updated today';
-  if (days === 1) return 'Updated yesterday';
-  if (days < 30) return `Updated ${days} days ago`;
-  const months = Math.floor(days / 30);
-  return `Updated ${months}mo ago`;
 }
 
 export default function HomePage() {
-  const { repos, stats: ghStats } = useGitHubRepos();
-  const latestRepos = repos.slice(0, 3);
-  
-  // Fetch live Portfolio CMS blogs
   const [personalPosts, setPersonalPosts] = useState([]);
   const [postsLoading, setPostsLoading] = useState(true);
 
@@ -141,84 +89,67 @@ export default function HomePage() {
   const [aboutRef, aboutVisible] = useScrollReveal();
   const [ctaRef, ctaVisible] = useScrollReveal();
 
-  // Typing animation
-  const [typed, setTyped] = useState('');
-  const fullText = siteConfig.descriptor;
-  useEffect(() => {
-    let i = 0;
-    const interval = setInterval(() => {
-      if (i <= fullText.length) {
-        setTyped(fullText.substring(0, i));
-        i++;
-      } else {
-        clearInterval(interval);
-      }
-    }, 35);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="home">
       <SEO
-        title="Elijah Adeyeye | Cybersecurity Researcher & Behavioral Scientist"
-        description="Founder of Elitech Hub. Cybersecurity researcher studying human behavior under threat — then building systems that defend against it."
+        title={`${siteConfig.name} | ${siteConfig.title}`}
+        description={siteConfig.descriptor}
         path="/"
       />
       {/* ── HERO SECTION ── */}
       <section className="hero" ref={heroRef}>
-        {/* Subtle photo background */}
-        <div className="hero__bg-image" />
-        <div className="hero__bg-overlay" />
-        <div className="hero__mesh mesh-background">
-          <div className="hero__orb hero__orb--1" />
-          <div className="hero__orb hero__orb--2" />
-          <div className="hero__orb hero__orb--3" />
-        </div>
+        <div className="hero__bg-image" style={{ opacity: 0.1 }} />
         <div className="hero__content container">
           <div className={`hero__text ${heroVisible ? 'visible' : ''}`}>
-            <p className="hero__greeting">Hello, I'm</p>
             <h1 className="hero__name">
-              <span className="gradient-text">Elijah</span> Adeyeye
+              Elijah Adeyeye
             </h1>
-            <p className="hero__title">{siteConfig.title}</p>
+            <p className="hero__title gradient-text">{siteConfig.title}</p>
             <p className="hero__descriptor">
-              "{typed}"
-              <span className="hero__cursor">|</span>
+              {siteConfig.descriptor}
             </p>
             <p className="hero__tagline">{siteConfig.tagline}</p>
             <div className="hero__ctas">
-              <Link to="/lab" className="btn btn--primary">
-                View My Work <HiArrowRight />
+              <Link to="/research" className="btn btn--primary">
+                Explore My Research <HiArrowRight />
               </Link>
               <Link to="/publications" className="btn btn--outline">
-                Read My Research
+                View Publications
+              </Link>
+              <Link to="/cv" className="btn btn--ghost">
+                Download CV
               </Link>
             </div>
           </div>
           <div className={`hero__image ${heroVisible ? 'visible' : ''}`}>
-            <div className="hero__photo-wrapper">
-              <div className="hero__photo-glow" />
+            <div className="hero__photo-wrapper" style={{ boxShadow: 'none' }}>
               <img src="/assets/images/profile/profile.jpg" alt="Elijah Adeyeye" className="hero__photo" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── STATS BAR ── */}
-      <section className="stats-bar">
-        <div className="stats-bar__inner container">
-          {stats.map((s, i) => (
-            <StatItem key={i} {...s} />
-          ))}
-          <StatItem value={ghStats.totalRepos} suffix="" label="GitHub Repositories" />
+      {/* ── RESEARCH PILLARS ── */}
+      <section className="section home__research">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-header__label">Focus Areas</span>
+            <h2 className="section-header__title">Research Pillars</h2>
+            <div className="accent-line" />
+          </div>
+          <div className="grid-3">
+            {researchInterests.map((pillar, i) => (
+              <ResearchPillarCard key={i} pillar={pillar} />
+            ))}
+          </div>
         </div>
       </section>
 
       {/* ── FEATURED PUBLICATIONS ── */}
-      <section className="section home__publications">
+      <section className="section section-alt home__publications">
         <div className="container">
           <div className="section-header">
-            <span className="section-header__label">Research</span>
+            <span className="section-header__label">Academic Output</span>
             <h2 className="section-header__title">Featured Publications</h2>
             <div className="accent-line" />
           </div>
@@ -235,17 +166,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── FEATURED LAB PROJECTS ── */}
-      <section className="section section-alt home__lab">
+      {/* ── FEATURED PROJECTS ── */}
+      <section className="section home__projects">
         <div className="container">
           <div className="section-header">
-            <span className="section-header__label">Developer Lab</span>
-            <h2 className="section-header__title">Latest from GitHub</h2>
+            <span className="section-header__label">Applied Technology</span>
+            <h2 className="section-header__title">Research Projects</h2>
             <div className="accent-line" />
           </div>
           <div className="grid-3">
-            {latestRepos.map(repo => (
-              <RepoCard key={repo.id} repo={repo} />
+            {featuredProjects.map((project, i) => (
+              <ProjectCard key={i} project={project} />
             ))}
           </div>
           <div className="section-footer">
@@ -256,7 +187,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── LATEST WRITING (Live from Personal CMS) ── */}
+      {/* ── ABOUT SNIPPET ── */}
+      <section className="section section-alt home__about" ref={aboutRef}>
+        <div className="container">
+          <div className={`home__about-grid ${aboutVisible ? 'visible' : ''}`}>
+            <div className="home__about-text">
+              <span className="section-header__label">About</span>
+              <h2 className="section-header__title">{aboutSnippet.headline}</h2>
+              <div className="accent-line" style={{ marginBottom: 'var(--space-6)' }} />
+              <p>{aboutSnippet.body}</p>
+              <Link to="/about" className="btn btn--primary" style={{ marginTop: 'var(--space-6)' }}>
+                Full Story <HiArrowRight />
+              </Link>
+            </div>
+            <div className="home__about-credentials">
+              {aboutSnippet.credentials.map((c, i) => (
+                <div key={i} className="credential-badge glass">
+                  <span className="credential-badge__icon">✓</span>
+                  <span>{c}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── LATEST WRITING ── */}
       <section className="section home__writing">
         <div className="container">
           <div className="section-header">
@@ -297,49 +253,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── ABOUT SNIPPET ── */}
-      <section className="section section-alt home__about" ref={aboutRef}>
-        <div className="container">
-          <div className={`home__about-grid ${aboutVisible ? 'visible' : ''}`}>
-            <div className="home__about-text">
-              <span className="section-header__label">About</span>
-              <h2 className="section-header__title">{aboutSnippet.headline}</h2>
-              <div className="accent-line" style={{ marginBottom: 'var(--space-6)' }} />
-              <p>{aboutSnippet.body}</p>
-              <Link to="/about" className="btn btn--primary" style={{ marginTop: 'var(--space-6)' }}>
-                Full Story <HiArrowRight />
-              </Link>
-            </div>
-            <div className="home__about-credentials">
-              {aboutSnippet.credentials.map((c, i) => (
-                <div key={i} className="credential-badge glass">
-                  <span className="credential-badge__icon">✓</span>
-                  <span>{c}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── TESTIMONIALS ── */}
-      <section className="section home__testimonials">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-header__label">Testimonials</span>
-            <h2 className="section-header__title">What People Say</h2>
-            <div className="accent-line" />
-          </div>
-          <div className="testimonials-scroll">
-            {testimonials.map((t, i) => (
-              <TestimonialCard key={i} t={t} />
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── ELITECH CTA ── */}
-      <section className="section home__elitech-cta" ref={ctaRef}>
+      <section className="section section-alt home__elitech-cta" ref={ctaRef}>
         <div className={`home__elitech-banner ${ctaVisible ? 'visible' : ''}`}>
           <div className="container">
             <div className="home__elitech-content">

@@ -6,7 +6,7 @@ import { useGitHubRepos } from '../hooks/useGitHubRepos';
 import { featuredProjects, languageColors, siteConfig } from '../data/siteData';
 import './LabPage.css';
 
-const categories = ['All', 'Cybersecurity', 'Data Analysis', 'AI/ML', 'Web Dev', 'Tools'];
+
 
 function getRelativeTime(date) {
   const diff = Date.now() - new Date(date).getTime();

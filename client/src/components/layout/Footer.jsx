@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaLinkedinIn, FaGithub, FaXTwitter, FaTelegram, FaThreads, FaFacebook } from 'react-icons/fa6';
+import { FaLinkedinIn, FaGithub, FaXTwitter, FaTelegram, FaThreads, FaFacebook, FaGraduationCap } from 'react-icons/fa6';
 import { HiArrowUp } from 'react-icons/hi';
 import { siteConfig, socialLinks } from '../../data/siteData';
 import './Footer.css';
@@ -11,6 +11,7 @@ const iconMap = {
   telegram: FaTelegram,
   threads: FaThreads,
   facebook: FaFacebook,
+  academic: FaGraduationCap,
 };
 
 export default function Footer() {

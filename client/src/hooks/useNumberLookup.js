@@ -204,7 +204,7 @@ export function useNumberLookup() {
         allocationYear,
         checkedAt: new Date().toISOString(),
       });
-    } catch (err) {
+    } catch {
       setError('Lookup failed. Please try again.');
     } finally {
       setLoading(false);

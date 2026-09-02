@@ -2,7 +2,7 @@ import { useState } from 'react';
 import SEO from '../components/SEO';
 import { HiMail, HiLocationMarker, HiPhone, HiClock, HiArrowRight } from 'react-icons/hi';
 import { siteConfig, contactSubjects, socialLinks } from '../data/siteData';
-import { FaLinkedinIn, FaGithub, FaXTwitter, FaTelegram, FaThreads, FaFacebook } from 'react-icons/fa6';
+import { FaLinkedinIn, FaGithub, FaXTwitter, FaTelegram, FaThreads, FaFacebook, FaGraduationCap } from 'react-icons/fa6';
 import './ContactPage.css';
 
 const iconMap = {
@@ -12,6 +12,7 @@ const iconMap = {
   telegram: FaTelegram,
   threads: FaThreads,
   facebook: FaFacebook,
+  academic: FaGraduationCap,
 };
 
 export default function ContactPage() {

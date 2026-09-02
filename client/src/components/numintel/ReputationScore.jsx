@@ -9,7 +9,7 @@ export default function ReputationScore({ score, reasons }) {
   
   // Animate score from 0 to final value
   useEffect(() => {
-    setAnimatedScore(0);
+    setAnimatedScore(0); // eslint-disable-line react-hooks/set-state-in-effect
     const duration = 1500;
     const startTime = Date.now();
     

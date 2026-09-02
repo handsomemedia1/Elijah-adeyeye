@@ -1,42 +1,55 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO';
 import { supabase } from '../lib/supabase';
 import { HiArrowLeft, HiClock, HiEye, HiTag } from 'react-icons/hi';
+import { useInitialData } from '../contexts/InitialDataContext';
 import './BlogPage.css';
 
 export default function BlogPostPage() {
   const { slug } = useParams();
-  const [post, setPost] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const initialData = useInitialData();
+  const initialPost = initialData?.post || null;
+  
+  const [post, setPost] = useState(initialPost);
+  const [loading, setLoading] = useState(!initialPost);
   const [relatedPosts, setRelatedPosts] = useState([]);
 
   useEffect(() => {
+    // If we have initialPost and the slug matches, no need to fetch the post again, just the related posts and view count
     async function fetchPost() {
-      setLoading(true);
-      const { data, error } = await supabase
-        .from('portfolio_blog_posts')
-        .select('*')
-        .eq('slug', slug)
-        .eq('published', true)
-        .single();
-
-      if (data) {
-        setPost(data);
-
-        // Increment view count
-        await supabase
+      if (!initialPost || initialPost.slug !== slug) {
+        setLoading(true);
+        const { data } = await supabase
           .from('portfolio_blog_posts')
-          .update({ views: (data.views || 0) + 1 })
-          .eq('id', data.id);
+          .select('*')
+          .eq('slug', slug)
+          .eq('published', true)
+          .single();
+        if (data) {
+          setPost(data);
+        } else {
+          setPost(null);
+        }
+      }
+      
+      const currentPost = initialPost?.slug === slug ? initialPost : post;
+      
+      if (currentPost) {
+        // Increment view count asynchronously
+        supabase
+          .from('portfolio_blog_posts')
+          .update({ views: (currentPost.views || 0) + 1 })
+          .eq('id', currentPost.id);
 
         // Fetch related posts (same category)
         const { data: related } = await supabase
           .from('portfolio_blog_posts')
           .select('id, title, slug, thumbnail, category, published_at')
           .eq('published', true)
-          .eq('category', data.category)
-          .neq('id', data.id)
+          .eq('category', currentPost.category)
+          .neq('id', currentPost.id)
           .limit(3);
         setRelatedPosts(related || []);
       }
@@ -44,7 +57,7 @@ export default function BlogPostPage() {
     }
     fetchPost();
     window.scrollTo(0, 0);
-  }, [slug]);
+  }, [slug, initialPost, post]);
 
   if (loading) {
     return (
@@ -63,56 +76,51 @@ export default function BlogPostPage() {
   if (!post) {
     return (
       <div className="container" style={{ padding: '20vh 0', textAlign: 'center' }}>
+        <Helmet>
+          <title>Post Not Found | Elijah Adeyeye</title>
+          <meta name="robots" content="noindex, nofollow" />
+        </Helmet>
         <h1 className="gradient-text" style={{ fontSize: '4rem', marginBottom: '1rem' }}>404</h1>
         <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', marginBottom: 24 }}>
           This post doesn't exist or hasn't been published yet.
         </p>
-        <Link to="/blog" className="btn btn--primary">← Back to Blog</Link>
+        <Link to="/blog" className="btn btn--primary">Back to Blog</Link>
       </div>
     );
   }
 
   const wordCount = post.body ? post.body.replace(/<[^>]*>/g, ' ').split(/\s+/).filter(Boolean).length : 0;
   const readTime = Math.max(1, Math.ceil(wordCount / 200));
+  
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.meta_description || post.excerpt,
+    datePublished: post.published_at,
+    dateModified: post.updated_at || post.published_at,
+    author: {
+      '@type': 'Person',
+      name: 'Elijah Adeyeye',
+      url: 'https://elijahadeyeye.vercel.app/'
+    },
+    image: post.og_image || post.thumbnail || undefined,
+    url: `https://elijahadeyeye.vercel.app/blog/${post.slug}`
+  };
 
   return (
     <article className="blog-post">
+      <SEO
+        title={`${post.meta_title || post.title} - Blog`}
+        description={post.meta_description || post.excerpt || ''}
+        path={`/blog/${post.slug}`}
+        type="article"
+        image={post.og_image || post.thumbnail}
+        jsonLd={[articleSchema]}
+      />
+      {/* Fallback Helmet for specific article tags if needed */}
       <Helmet>
-        <title>{post.meta_title || post.title} | Elijah Adeyeye</title>
-        <meta name="description" content={post.meta_description || post.excerpt || ''} />
-        <meta property="og:title" content={post.meta_title || post.title} />
-        <meta property="og:description" content={post.meta_description || post.excerpt || ''} />
-        {(post.og_image || post.thumbnail) && (
-          <meta property="og:image" content={post.og_image || post.thumbnail} />
-        )}
-        <meta property="og:type" content="article" />
         <meta property="article:published_time" content={post.published_at} />
-        <meta property="article:author" content="Elijah Adeyeye" />
-        <link rel="canonical" href={`https://client-eight-hazel.vercel.app/blog/${post.slug}`} />
-
-        {/* JSON-LD Structured Data for Google */}
-        <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          "headline": post.title,
-          "description": post.meta_description || post.excerpt,
-          "image": post.og_image || post.thumbnail,
-          "datePublished": post.published_at,
-          "dateModified": post.updated_at || post.published_at,
-          "author": {
-            "@type": "Person",
-            "name": "Elijah Adeyeye",
-            "url": "https://client-eight-hazel.vercel.app"
-          },
-          "publisher": {
-            "@type": "Person",
-            "name": "Elijah Adeyeye"
-          },
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": `https://client-eight-hazel.vercel.app/blog/${post.slug}`
-          }
-        })}</script>
       </Helmet>
 
       {/* Back button */}

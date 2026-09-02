@@ -13,6 +13,19 @@ export function useGitHubRepos(username = 'handsomemedia1') {
     topLanguage: '',
   });
 
+  // computeStats must be declared before fetchRepos so it's accessible via closure
+  const computeStats = useCallback((data) => {
+    const totalStars = data.reduce((acc, repo) => acc + (repo.stargazers_count || 0), 0);
+    const langCount = {};
+    data.forEach(repo => {
+      if (repo.language) {
+        langCount[repo.language] = (langCount[repo.language] || 0) + 1;
+      }
+    });
+    const topLanguage = Object.entries(langCount).sort((a, b) => b[1] - a[1])[0]?.[0] || 'N/A';
+    setStats({ totalRepos: data.length, totalStars, topLanguage });
+  }, []);
+
   const fetchRepos = useCallback(async () => {
     try {
       // Check cache first
@@ -35,12 +48,9 @@ export function useGitHubRepos(username = 'handsomemedia1') {
       if (!response.ok) throw new Error('Failed to fetch repos');
 
       const data = await response.json();
-      
+
       // Cache the data
-      localStorage.setItem(CACHE_KEY, JSON.stringify({
-        data,
-        timestamp: Date.now(),
-      }));
+      localStorage.setItem(CACHE_KEY, JSON.stringify({ data, timestamp: Date.now() }));
 
       setRepos(data);
       computeStats(data);
@@ -57,27 +67,13 @@ export function useGitHubRepos(username = 'handsomemedia1') {
     } finally {
       setLoading(false);
     }
-  }, [username]);
-
-  const computeStats = (data) => {
-    const totalStars = data.reduce((acc, repo) => acc + (repo.stargazers_count || 0), 0);
-    const langCount = {};
-    data.forEach(repo => {
-      if (repo.language) {
-        langCount[repo.language] = (langCount[repo.language] || 0) + 1;
-      }
-    });
-    const topLanguage = Object.entries(langCount).sort((a, b) => b[1] - a[1])[0]?.[0] || 'N/A';
-
-    setStats({
-      totalRepos: data.length,
-      totalStars,
-      topLanguage,
-    });
-  };
+  }, [username, computeStats]);
 
   useEffect(() => {
-    fetchRepos();
+    async function load() {
+      await fetchRepos();
+    }
+    load();
   }, [fetchRepos]);
 
   return { repos, loading, error, stats, refetch: fetchRepos };

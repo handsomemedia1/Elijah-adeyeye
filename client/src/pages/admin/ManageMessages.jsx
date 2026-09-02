@@ -8,7 +8,6 @@ export default function ManageMessages() {
   const [loading, setLoading] = useState(true);
 
   const fetchMessages = async () => {
-    setLoading(true);
     const { data } = await supabase
       .from('portfolio_messages')
       .select('*')
@@ -17,7 +16,7 @@ export default function ManageMessages() {
     setLoading(false);
   };
 
-  useEffect(() => { fetchMessages(); }, []);
+  useEffect(() => { async function load() { await fetchMessages(); } load(); }, []);
 
   const handleDelete = async (id) => {
     if (!confirm('Delete this message?')) return;

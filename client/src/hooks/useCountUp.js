@@ -7,7 +7,7 @@ export function useCountUp(end, duration = 2000, startOnView = true) {
 
   useEffect(() => {
     if (!startOnView) {
-      setStarted(true);
+      setStarted(true); // eslint-disable-line react-hooks/set-state-in-effect
       return;
     }
     const el = ref.current;

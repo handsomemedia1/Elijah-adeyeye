@@ -32,7 +32,6 @@ export default function ManageWriting() {
   const [activeTab, setActiveTab] = useState('editor'); // editor | seo | preview
 
   const fetchPosts = async () => {
-    setLoading(true);
     const { data } = await supabase
       .from('portfolio_blog_posts')
       .select('*')
@@ -41,7 +40,7 @@ export default function ManageWriting() {
     setLoading(false);
   };
 
-  useEffect(() => { fetchPosts(); }, []);
+  useEffect(() => { async function load() { await fetchPosts(); } load(); }, []);
 
   const openNew = () => { setForm(EMPTY_POST); setEditing('new'); setActiveTab('editor'); };
   const openEdit = (post) => {

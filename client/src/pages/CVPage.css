@@ -1,0 +1,132 @@
+.cv-page__container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+.cv-page__section-title {
+  font-size: var(--text-2xl);
+  color: var(--text-primary);
+  margin-bottom: var(--space-8);
+  margin-top: var(--space-12);
+}
+
+.cv-page__section-title:first-child {
+  margin-top: 0;
+}
+
+.cv-page__timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.cv-page__item {
+  padding: var(--space-6);
+}
+
+.cv-page__item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-2);
+}
+
+.cv-page__item-header h3 {
+  font-size: var(--text-xl);
+  color: var(--text-primary);
+}
+
+.cv-page__item-period {
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+}
+
+.cv-page__item-company {
+  font-size: var(--text-md);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+  font-weight: var(--weight-medium);
+}
+
+.cv-page__item-desc {
+  font-size: var(--text-md);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+.cv-page__sidebar-box {
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.cv-page__sidebar-box h3 {
+  font-size: var(--text-lg);
+  color: var(--text-primary);
+  margin-bottom: var(--space-6);
+}
+
+.cv-page__skill-group {
+  margin-bottom: var(--space-6);
+}
+
+.cv-page__skill-group h4 {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-3);
+}
+
+.cv-page__skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.cv-page__cert-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.cv-page__cert-list li {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.cv-page__cert-icon {
+  font-size: var(--text-xl);
+}
+
+.cv-page__cert-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.cv-page__cert-name {
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+}
+
+.cv-page__cert-issuer {
+  color: var(--text-tertiary);
+  font-size: var(--text-xs);
+}
+
+@media (max-width: 768px) {
+  .cv-page__container {
+    grid-template-columns: 1fr;
+  }
+  
+  .cv-page__item-header {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+}

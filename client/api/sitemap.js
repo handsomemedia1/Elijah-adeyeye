@@ -32,13 +32,34 @@ export default async function handler(req, res) {
       '/elitech',
       '/writing',
       '/blog',
-      '/contact'
+      '/contact',
+      '/cv',
+      '/collaborate'
     ];
+
+    // Data for dynamic routes from siteData.js isn't easily importable in an edge function without a bundler setup.
+    // Assuming hardcoded mapping for now to ensure crawlability, or relying on Vercel's build process if this is run in Node.
+    // For a true dynamic build, we should fetch from DB, but these are static in the codebase.
+    const siteDataRoutes = [
+      '/research/ai-evaluation',
+      '/research/human-behaviour',
+      '/research/behavioural-cybersecurity',
+      '/research/ai-cybersecurity',
+      '/research/ai-research-integrity',
+      '/publications/can-ai-express-empathy',
+      '/publications/online-trauma-academic-outcomes',
+      '/publications/measurement-equivalence-emotional-expression',
+      '/projects/behavioral-phishing-detection',
+      '/projects/cross-platform-fraud-detection-system',
+      '/projects/elitech-hub-platform'
+    ];
+
+    const allStaticRoutes = [...staticRoutes, ...siteDataRoutes];
 
     // 4. Generate XML string
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  ${staticRoutes
+  ${allStaticRoutes
     .map((route) => {
       return `
   <url>

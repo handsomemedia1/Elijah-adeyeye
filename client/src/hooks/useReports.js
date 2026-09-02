@@ -45,8 +45,8 @@ export function useReports() {
   }, []);
 
   useEffect(() => {
-    fetchLeaderboard();
-    // Refresh every 60 seconds
+    async function load() { await fetchLeaderboard(); }
+    load();
     const interval = setInterval(fetchLeaderboard, 60000);
     return () => clearInterval(interval);
   }, [fetchLeaderboard]);

@@ -114,7 +114,6 @@ export default function BlogPage() {
 
 function BlogCard({ post }) {
   const [ref, visible] = useScrollReveal();
-  const readTime = Math.max(1, Math.ceil((post.views || 100) / 200)); // estimate
 
   return (
     <Link to={`/blog/${post.slug}`} className={`blog__card glass ${visible ? 'visible' : ''}`} ref={ref}>

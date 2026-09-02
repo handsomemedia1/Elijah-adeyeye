@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:prerender": "node prerender.mjs",
+    "build:full": "vite build && node prerender.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },

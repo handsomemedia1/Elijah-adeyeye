@@ -1,15 +1,17 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 
 const HISTORY_KEY = 'numintel_history';
 const MAX_HISTORY = 10;
 
 export function useSearchHistory() {
-  const [history, setHistory] = useState([]);
-
-  useEffect(() => {
-    const stored = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
-    setHistory(stored);
-  }, []);
+  const [history, setHistory] = useState(() => {
+    try {
+      const stored = localStorage.getItem(HISTORY_KEY);
+      return stored ? JSON.parse(stored) : [];
+    } catch {
+      return [];
+    }
+  });
 
   const addToHistory = useCallback((result) => {
     setHistory(prev => {

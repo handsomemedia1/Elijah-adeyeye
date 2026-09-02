@@ -12,23 +12,12 @@ export default async function handler(req, res) {
   const NUMVERIFY_API_KEY = process.env.NUMVERIFY_API_KEY;
 
   if (!NUMVERIFY_API_KEY) {
-    // For now, return a placeholder response since we are using local parsing
-    return res.status(200).json({
-      valid: true,
-      number: phone,
-      local_format: '',
-      international_format: '',
-      country_prefix: '',
-      country_code: '',
-      country_name: '',
-      location: '',
-      carrier: '',
-      line_type: ''
-    });
+    // Return an honest error indicating the service is unavailable
+    return res.status(503).json({ error: 'Phone verification service is currently unavailable. Please try again later.' });
   }
 
   try {
-    const url = `http://apilayer.net/api/validate?access_key=${NUMVERIFY_API_KEY}&number=${encodeURIComponent(phone)}`;
+    const url = `https://apilayer.net/api/validate?access_key=${NUMVERIFY_API_KEY}&number=${encodeURIComponent(phone)}`;
     const response = await fetch(url);
     const data = await response.json();
 

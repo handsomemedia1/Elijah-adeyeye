@@ -5,6 +5,7 @@ import {
   HiOutlineMail, HiOutlineLogout, HiOutlineAcademicCap,
   HiOutlinePencilAlt, HiOutlineGlobeAlt
 } from 'react-icons/hi';
+import SEO from '../../components/SEO';
 import './Admin.css';
 
 export default function AdminLayout() {
@@ -18,6 +19,7 @@ export default function AdminLayout() {
 
   return (
     <div className="admin">
+      <SEO title="Admin Dashboard" description="Private Admin Dashboard" noindex={true} />
       <aside className="admin__sidebar glass">
         <div className="admin__sidebar-header">
           <span className="gradient-text" style={{ fontSize: '1.75rem', fontWeight: 900 }}>EA</span>

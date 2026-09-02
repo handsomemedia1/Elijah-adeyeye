@@ -7,11 +7,8 @@ import { blogPosts } from '../data/siteData';
 import { useElitechBlogs } from '../hooks/useElitechBlogs';
 import './WritingPage.css';
 
-const tags = ['All', 'Cybersecurity', 'Psychology', 'AI', 'Education'];
-
 export default function WritingPage() {
   const [typeFilter, setTypeFilter] = useState('all');
-  const [tagFilter, setTagFilter] = useState('All');
   const [expandedPost, setExpandedPost] = useState(null);
 
   // Live Elitech Hub blogs from Supabase
@@ -21,7 +18,6 @@ export default function WritingPage() {
     if (typeFilter === 'articles' && p.type !== 'article') return false;
     if (typeFilter === 'linkedin' && p.type !== 'linkedin') return false;
     if (typeFilter === 'elitech') return false; // Elitech posts have their own section
-    if (tagFilter !== 'All' && !p.tags.includes(tagFilter)) return false;
     return true;
   });
 
@@ -162,8 +158,7 @@ export default function WritingPage() {
                 </div>
               )}
 
-              {/* Featured Post */}
-              {featured && typeFilter !== 'elitech' && tagFilter === 'All' && (
+              {featured && typeFilter !== 'elitech' && (
                 <div className="writing__featured glass" onClick={() => setExpandedPost(featured.id === expandedPost ? null : featured.id)}>
                   <div className="writing__featured-badge">
                     <FaLinkedinIn /> Featured Post

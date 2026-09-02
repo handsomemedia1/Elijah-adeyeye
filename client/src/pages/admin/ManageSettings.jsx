@@ -6,7 +6,6 @@ import './Admin.css';
 export default function ManageSettings() {
   const [settings, setSettings] = useState(null);
   const [uploading, setUploading] = useState(false);
-  const [saving, setSaving] = useState(false);
   const [success, setSuccess] = useState('');
 
   useEffect(() => {
