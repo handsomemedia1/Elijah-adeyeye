@@ -127,43 +127,15 @@ export function useNumberLookup() {
         b => b.affectedCountries.includes(country || 'NG')
       );
 
-      // External APIs integration
-      const IPQS_KEY = 'TMTd6YrDYIbRSJrsEQBwdMXrUsAC0shO';
-      const NUMVERIFY_KEY = 'D8Ob3OV31JjG2MvF1qVz3MQaareHQZrC';
-      
-      const cleanPhone = e164.replace('+', '');
       let isVoIP = false;
-      let apiCarrier = null;
-      let apiLineType = null;
       let apiValid = isValid; // Default to local parsing validation
+      let nationalFormat = parsed?.formatNational() || e164;
+      let callingCode = parsed?.countryCallingCode || '';
       
-      try {
-        // Try fetching from Numverify (APILayer)
-        const nvPromise = fetch(`https://api.apilayer.com/number_verification/validate?number=${cleanPhone}`, {
-          headers: { 'apikey': NUMVERIFY_KEY }
-        }).then(r => r.json()).catch(() => null);
-        
-        // Try fetching from IPQualityScore
-        const ipqsPromise = fetch(`https://www.ipqualityscore.com/api/json/phone/${IPQS_KEY}/${cleanPhone}`)
-          .then(r => r.json()).catch(() => null);
-          
-        const [nvData, ipqsData] = await Promise.all([nvPromise, ipqsPromise]);
-        
-        if (nvData && nvData.valid !== undefined) {
-          apiValid = nvData.valid;
-          if (nvData.line_type) apiLineType = nvData.line_type.toLowerCase();
-          if (nvData.carrier) apiCarrier = nvData.carrier;
-        }
-        
-        if (ipqsData && ipqsData.success) {
-          if (ipqsData.voip) isVoIP = true;
-          if (ipqsData.spammer) reportCount += 1; // Count as community report equivalent
-          if (ipqsData.line_type) apiLineType = ipqsData.line_type.toLowerCase();
-          if (ipqsData.carrier && !apiCarrier) apiCarrier = ipqsData.carrier;
-        }
-      } catch (err) {
-        console.warn('External API lookup failed, falling back to local dataset.', err);
-      }
+      // We removed the client-side API calls for IPQS and Numverify because 
+      // exposing hardcoded API keys in the frontend is a severe security vulnerability.
+      // NumIntel now relies on local offline parsing via libphonenumber-js for formats,
+      // and local datasets for Nigerian carrier detection and reputation checking.
 
       // 5. Calculate score
       const signals = {
@@ -172,8 +144,8 @@ export function useNumberLookup() {
         inScamDataset,
         breachExposure: relevantBreaches.length > 0,
         isValid: apiValid,
-        carrierDetected: !!carrierInfo || !!apiCarrier,
-        carrierName: carrierInfo?.carrier || apiCarrier || 'Unknown',
+        carrierDetected: !!carrierInfo,
+        carrierName: carrierInfo?.carrier || 'Unknown',
       };
 
       const { score, reasons } = calculateScore(signals);
@@ -183,17 +155,15 @@ export function useNumberLookup() {
       setResult({
         phone: e164,
         formatted: international,
+        nationalFormat,
+        callingCode,
         country: country || defaultCountry,
         carrier: carrierInfo ? {
           name: carrierInfo.carrier,
           color: carrierInfo.color,
           darkColor: carrierInfo.darkColor,
-        } : apiCarrier ? {
-          name: apiCarrier,
-          color: 'var(--color-primary)',
-          darkColor: 'var(--color-primary)',
         } : null,
-        lineType: apiLineType || (carrierInfo ? 'mobile' : 'unknown'),
+        lineType: carrierInfo ? 'mobile' : (isValid ? 'possible mobile/fixed' : 'unknown'),
         score,
         reasons,
         reports,

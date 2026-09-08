@@ -40,6 +40,20 @@ let ROUTES_TO_PRERENDER = [
   '/cv',
   '/collaborate',
   '/numintel',
+  '/numintel/phone-number-validator',
+  '/numintel/international-phone-number-validator',
+  '/numintel/e164-phone-number-validator',
+  '/numintel/countries',
+  '/numintel/countries/nigeria',
+  '/numintel/countries/ghana',
+  '/numintel/countries/kenya',
+  '/numintel/countries/south-africa',
+  '/numintel/countries/united-kingdom',
+  '/numintel/countries/united-states',
+  '/numintel/guides',
+  '/numintel/guides/what-is-e164',
+  '/numintel/guides/international-phone-number-format',
+  '/numintel/guides/phone-number-validation',
 ];
 
 async function prerender() {

@@ -20,8 +20,13 @@ import ContactPage from './pages/ContactPage';
 import CVPage from './pages/CVPage';
 import CollaboratePage from './pages/CollaboratePage';
 
-// Lazy loaded - Not critical for SEO or specifically requested by user for code-splitting
-const NumIntelPage = lazy(() => import('./pages/NumIntelPage'));
+// NumIntel Product Pages - Eager loaded for SEO
+import NumIntelLanding from './pages/numintel/NumIntelLanding';
+import NumIntelToolPage from './pages/numintel/NumIntelToolPage';
+import CountryListPage from './pages/numintel/CountryListPage';
+import CountryPage from './pages/numintel/CountryPage';
+import GuideListPage from './pages/numintel/GuideListPage';
+import GuidePage from './pages/numintel/GuidePage';
 
 // Admin — lazy
 import { AuthProvider } from './contexts/AuthContext';
@@ -52,7 +57,14 @@ export default function AppRoutes() {
           <Route path="publications/:slug" element={<PublicationDetailPage />} />
           <Route path="lab" element={<LabPage />} />
           <Route path="projects/:slug" element={<ProjectDetailPage />} />
-          <Route path="numintel" element={<NumIntelPage />} />
+          
+          <Route path="numintel" element={<NumIntelLanding />} />
+          <Route path="numintel/:toolSlug" element={<NumIntelToolPage />} />
+          <Route path="numintel/countries" element={<CountryListPage />} />
+          <Route path="numintel/countries/:countrySlug" element={<CountryPage />} />
+          <Route path="numintel/guides" element={<GuideListPage />} />
+          <Route path="numintel/guides/:guideSlug" element={<GuidePage />} />
+
           <Route path="writing" element={<WritingPage />} />
           <Route path="blog" element={<BlogPage />} />
           <Route path="blog/:slug" element={<BlogPostPage />} />

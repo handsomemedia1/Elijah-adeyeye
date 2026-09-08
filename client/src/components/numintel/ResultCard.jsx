@@ -39,7 +39,7 @@ View more at https://elijahadeyeye.vercel.app/numintel`;
 
       <div className="ni-result__grid">
         <div className="ni-result__item">
-          <span className="ni-result__label"><HiPhone /> Phone</span>
+          <span className="ni-result__label"><HiPhone /> Int. Format</span>
           <span className="ni-result__value">
             {result.formatted}
             <button className="ni-result__copy" onClick={handleCopy} title="Copy">
@@ -49,8 +49,23 @@ View more at https://elijahadeyeye.vercel.app/numintel`;
         </div>
         
         <div className="ni-result__item">
+          <span className="ni-result__label">📱 E.164</span>
+          <span className="ni-result__value">{result.phone}</span>
+        </div>
+
+        <div className="ni-result__item">
+          <span className="ni-result__label">🏠 National</span>
+          <span className="ni-result__value">{result.nationalFormat || 'N/A'}</span>
+        </div>
+        
+        <div className="ni-result__item">
           <span className="ni-result__label"><HiGlobe /> Country</span>
           <span className="ni-result__value">{result.country}</span>
+        </div>
+
+        <div className="ni-result__item">
+          <span className="ni-result__label">📞 Code</span>
+          <span className="ni-result__value">+{result.callingCode}</span>
         </div>
 
         <div className="ni-result__item">
@@ -67,34 +82,18 @@ View more at https://elijahadeyeye.vercel.app/numintel`;
         </div>
 
         <div className="ni-result__item">
-          <span className="ni-result__label">📱 Line Type</span>
-          <span className="ni-result__value ni-result__line-type">
-            {result.lineType === 'mobile' ? 'Mobile' :
-             result.lineType === 'voip' ? 'VoIP' :
-             result.lineType === 'landline' ? 'Landline' : 'Unknown'}
-          </span>
-        </div>
-
-        <div className="ni-result__item">
           <span className="ni-result__label">✅ Valid</span>
           <span className={`ni-result__value ${result.isValid ? 'ni-result__valid' : 'ni-result__invalid'}`}>
-            {result.isValid ? 'Yes' : 'Unverified'}
+            {result.isValid ? 'Yes' : 'No'}
           </span>
         </div>
 
         <div className="ni-result__item">
           <span className="ni-result__label">📋 Reports</span>
           <span className={`ni-result__value ${result.reportCount > 0 ? 'ni-result__danger-count' : ''}`}>
-            {result.reportCount} report{result.reportCount !== 1 ? 's' : ''}
+            {result.reportCount}
           </span>
         </div>
-
-        {result.allocationYear && (
-          <div className="ni-result__item">
-            <span className="ni-result__label">📅 Est. Age</span>
-            <span className="ni-result__value">{result.allocationYear}</span>
-          </div>
-        )}
       </div>
 
       {result.inScamDataset && (
