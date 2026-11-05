@@ -31,7 +31,7 @@ export default function AboutPage() {
     <div className="about page-enter">
       <SEO
         title="About Elijah Adeyeye"
-        description="B.Ed University of Ibadan. Certified Counselling Psychologist and Elitech Hub Founder. Background in Guidance & Counselling with advanced cybersecurity certifications."
+        description="Elijah Adeyeye: B.Ed University of Ibadan, certified counselling psychologist, founder of Elitech Hub, with advanced cybersecurity certifications."
         path="/about"
       />
       {/* Page Header */}
@@ -98,7 +98,7 @@ export default function AboutPage() {
           <div className={`about__cred-grid ${credVisible ? 'visible' : ''}`}>
             {researchCredentials.map((cred, i) => (
               <div key={i} className="cred-card glass">
-                <span className={`pub-card__badge ${cred.status === 'Accepted' ? 'badge--accepted' : 'badge--review'}`}>
+                <span className={`pub-card__badge ${cred.status === 'Accepted' ? 'badge--accepted' : cred.status === 'Published' ? 'badge--published' : 'badge--review'}`}>
                   {cred.status}
                 </span>
                 <h3 className="cred-card__title">{cred.title}</h3>

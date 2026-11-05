@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.104.0",
+    "dompurify": "^3.4.17",
     "libphonenumber-js": "^1.13.6",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",

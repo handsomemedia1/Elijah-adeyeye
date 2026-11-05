@@ -62,8 +62,8 @@ export default function PublicationDetailPage() {
   return (
     <div className="pub-detail page-enter">
       <SEO
-        title={`${publication.title} — Publication`}
-        description={publication.abstract.substring(0, 160)}
+        title={publication.title}
+        description={publication.abstract}
         path={`/publications/${publication.slug}`}
         type="article"
         jsonLd={[articleSchema, breadcrumbSchema]}
@@ -126,6 +126,9 @@ export default function PublicationDetailPage() {
                   <li><strong>Date:</strong> {publication.date || publication.publishedDate || publication.submitted}</li>
                   {publication.doi && (
                     <li><strong>DOI:</strong> <a href={`https://doi.org/${publication.doi}`} target="_blank" rel="noopener noreferrer">{publication.doi} <HiExternalLink /></a></li>
+                  )}
+                  {publication.correctionDoi && (
+                    <li><strong>Correction:</strong> <a href={`https://doi.org/${publication.correctionDoi}`} target="_blank" rel="noopener noreferrer">{publication.correctionDoi} <HiExternalLink /></a></li>
                   )}
                   {publication.manuscriptId && <li><strong>Manuscript ID:</strong> {publication.manuscriptId}</li>}
                   {publication.abstractId && <li><strong>Abstract ID:</strong> {publication.abstractId}</li>}

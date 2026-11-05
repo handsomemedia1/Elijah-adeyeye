@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '../../lib/supabase';
+import { elitechImageUrl } from '../../data/siteData';
 import { HiExternalLink, HiEye, HiRefresh } from 'react-icons/hi';
 import './Admin.css';
 
@@ -46,7 +47,7 @@ export default function ManageElitech() {
             <div key={post.id} className="admin-writing-card glass">
               {post.thumbnail && (
                 <div className="admin-writing-card__thumb">
-                  <img src={post.thumbnail} alt={post.title} />
+                  <img src={elitechImageUrl(post.thumbnail)} alt={post.title} />
                 </div>
               )}
               <span className="admin-writing-card__category">{post.category || 'Blog'}</span>

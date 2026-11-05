@@ -19,10 +19,19 @@ export default function GuidePage() {
   return (
     <div className="numintel page-enter">
       <SEO
-        title={`${guide.title} | NumIntel Guides`}
+        title={`${guide.title} | NumIntel`}
         description={guide.description}
         path={`/numintel/guides/${guide.slug}`}
         type="article"
+        jsonLd={[{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: guide.title,
+          description: guide.description,
+          dateModified: guide.lastUpdated,
+          url: `https://elijahadeyeye.vercel.app/numintel/guides/${guide.slug}`,
+          author: { '@type': 'Person', name: 'Elijah Adeyeye', url: 'https://elijahadeyeye.vercel.app' },
+        }]}
       />
       
       <section className="page-hero">

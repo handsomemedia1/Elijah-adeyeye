@@ -34,7 +34,7 @@ export default function ElitechPage() {
             <div className="elitech__badges">
               <span className="pub-card__badge badge--accepted">CAC Registered</span>
               <span className="pub-card__badge badge--accepted">SMEDAN Registered</span>
-              <span className="pub-card__badge badge--published">Abuja, Nigeria</span>
+              <span className="pub-card__badge badge--published">Ibadan, Nigeria</span>
             </div>
             <p className="elitech__mission">
               Elitech Hub is a cybersecurity training company built on a core philosophy: 
@@ -47,7 +47,7 @@ export default function ElitechPage() {
             </p>
             <div className="elitech__intro-stats glass">
               <div className="elitech__intro-stat">
-                <h3>50+</h3>
+                <h3>200+</h3>
                 <p>Students Trained</p>
               </div>
               <div className="elitech__intro-stat">

@@ -1,28 +1,17 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { supabase } from '../lib/supabase';
+import { useState } from 'react';
+import SEO from '../components/SEO';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { useElitechBlogs } from '../hooks/useElitechBlogs';
+import { elitechBlogUrl, elitechImageUrl, elitechPostUrl } from '../data/siteData';
 import './BlogPage.css';
 
+const formatDate = (iso, month) =>
+  new Date(iso).toLocaleDateString('en-US', { timeZone: 'UTC', month, day: 'numeric', year: 'numeric' });
+
 export default function BlogPage() {
-  const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const { posts, loading, error } = useElitechBlogs(100);
   const [activeCategory, setActiveCategory] = useState('All');
   const [headerRef, headerVisible] = useScrollReveal();
-
-  useEffect(() => {
-    async function fetchPosts() {
-      const { data } = await supabase
-        .from('portfolio_blog_posts')
-        .select('id, title, slug, excerpt, category, tags, thumbnail, published_at, views, meta_description')
-        .eq('published', true)
-        .order('published_at', { ascending: false });
-      setPosts(data || []);
-      setLoading(false);
-    }
-    fetchPosts();
-  }, []);
 
   const categories = ['All', ...new Set(posts.map(p => p.category).filter(Boolean))];
   const filtered = activeCategory === 'All' ? posts : posts.filter(p => p.category === activeCategory);
@@ -30,12 +19,11 @@ export default function BlogPage() {
 
   return (
     <div className="blog">
-      <Helmet>
-        <title>Blog | Elijah Adeyeye</title>
-        <meta name="description" content="Insights on cybersecurity, psychology, AI, and technology by Elijah Adeyeye." />
-        <meta property="og:title" content="Blog | Elijah Adeyeye" />
-        <meta property="og:description" content="Insights on cybersecurity, psychology, AI, and technology by Elijah Adeyeye." />
-      </Helmet>
+      <SEO
+        title="Blog"
+        description="Insights on cybersecurity, psychology, AI, and technology by Elijah Adeyeye, published on Elitech Hub."
+        path="/blog"
+      />
 
       {/* Hero */}
       <section className="blog__hero" ref={headerRef}>
@@ -52,23 +40,23 @@ export default function BlogPage() {
       {featuredPost && (
         <section className="blog__featured">
           <div className="container">
-            <Link to={`/blog/${featuredPost.slug}`} className="blog__featured-card glass">
+            <a href={elitechPostUrl(featuredPost.slug)} target="_blank" rel="noopener noreferrer" className="blog__featured-card glass">
               {featuredPost.thumbnail && (
                 <div className="blog__featured-thumb">
-                  <img src={featuredPost.thumbnail} alt={featuredPost.title} />
+                  <img src={elitechImageUrl(featuredPost.thumbnail)} alt={featuredPost.title} />
                 </div>
               )}
               <div className="blog__featured-content">
                 <span className="blog__category-tag">{featuredPost.category}</span>
                 <h2 className="blog__featured-title">{featuredPost.title}</h2>
-                <p className="blog__featured-excerpt">{featuredPost.excerpt || featuredPost.meta_description}</p>
+                <p className="blog__featured-excerpt">{featuredPost.excerpt}</p>
                 <div className="blog__meta">
-                  <span>{new Date(featuredPost.published_at).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+                  <span>{formatDate(featuredPost.published_at, 'long')}</span>
                   <span>·</span>
-                  <span>{(featuredPost.views || 0).toLocaleString()} views</span>
+                  <span>{(featuredPost.views || 0).toLocaleString('en-US')} views</span>
                 </div>
               </div>
-            </Link>
+            </a>
           </div>
         </section>
       )}
@@ -95,6 +83,10 @@ export default function BlogPage() {
         <div className="container">
           {loading ? (
             <div className="blog__loading">Loading posts...</div>
+          ) : error && posts.length === 0 ? (
+            <div className="blog__empty">
+              <p>Posts couldn't load. <a href={elitechBlogUrl} target="_blank" rel="noopener noreferrer">Read them on Elitech Hub</a>.</p>
+            </div>
           ) : filtered.length === 0 ? (
             <div className="blog__empty">
               <p>No posts in this category yet.</p>
@@ -116,10 +108,10 @@ function BlogCard({ post }) {
   const [ref, visible] = useScrollReveal();
 
   return (
-    <Link to={`/blog/${post.slug}`} className={`blog__card glass ${visible ? 'visible' : ''}`} ref={ref}>
+    <a href={elitechPostUrl(post.slug)} target="_blank" rel="noopener noreferrer" className={`blog__card glass ${visible ? 'visible' : ''}`} ref={ref}>
       {post.thumbnail && (
         <div className="blog__card-thumb">
-          <img src={post.thumbnail} alt={post.title} loading="lazy" />
+          <img src={elitechImageUrl(post.thumbnail)} alt={post.title} loading="lazy" />
         </div>
       )}
       <div className="blog__card-body">
@@ -127,10 +119,10 @@ function BlogCard({ post }) {
         <h3 className="blog__card-title">{post.title}</h3>
         <p className="blog__card-excerpt">{post.excerpt}</p>
         <div className="blog__meta">
-          <span>{new Date(post.published_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
-          <span>{(post.views || 0).toLocaleString()} views</span>
+          <span>{formatDate(post.published_at, 'short')}</span>
+          <span>{(post.views || 0).toLocaleString('en-US')} views</span>
         </div>
       </div>
-    </Link>
+    </a>
   );
 }

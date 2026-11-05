@@ -7,14 +7,14 @@ import '../NumIntelPage.css';
 const TOOL_CONTENT = {
   'phone-number-validator': {
     title: 'Phone Number Validator',
-    description: 'Verify phone number validity, format, and line type securely.',
+    description: "Verify a phone number's validity, format and line type, and extract its country code, with the NumIntel phone number validator.",
     h1: 'Phone Number Validator',
     subtitle: 'Check if a phone number is valid, extract its country code, and format it correctly without exposing personal data.',
     article: 'NumIntel validates phone numbers using international standards (E.164). This tool instantly checks the numbering plan length, country code, and extracts formatting information. We do not store or share your input.'
   },
   'international-phone-number-validator': {
     title: 'International Phone Number Validator',
-    description: 'Validate and format international phone numbers accurately.',
+    description: 'Validate international phone numbers and format them correctly for international dialling with the NumIntel validator.',
     h1: 'International Validator',
     subtitle: 'Parse global phone numbers into international dialing formats.',
     article: 'Dialing internationally requires dropping national trunk prefixes and correctly applying country calling codes. This tool parses any raw number into the correct international format, ensuring cross-border routing succeeds.'
@@ -48,6 +48,16 @@ export default function NumIntelToolPage({ toolId }) {
         title={`${content.title} | NumIntel`}
         description={content.description}
         path={`/numintel/${currentId}`}
+        jsonLd={[{
+          '@context': 'https://schema.org',
+          '@type': 'WebApplication',
+          name: content.title,
+          url: `https://elijahadeyeye.vercel.app/numintel/${currentId}`,
+          description: content.description,
+          applicationCategory: 'UtilitiesApplication',
+          operatingSystem: 'Any',
+          author: { '@type': 'Person', name: 'Elijah Adeyeye', url: 'https://elijahadeyeye.vercel.app' },
+        }]}
       />
       
       <section className="page-hero">

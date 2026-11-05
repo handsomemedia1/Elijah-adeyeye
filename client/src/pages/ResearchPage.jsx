@@ -14,7 +14,7 @@ export default function ResearchPage() {
     <div className="research page-enter">
       <SEO
         title="Research — Human Behavior & Cybersecurity"
-        description="Researching the intersection of artificial intelligence, human behaviour, security, and high-stakes decision-making."
+        description="Research by Elijah Adeyeye across AI evaluation, human behaviour, behavioural cybersecurity, AI and cybersecurity, and AI research integrity."
         path="/research"
       />
       <section className="page-hero">

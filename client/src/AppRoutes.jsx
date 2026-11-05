@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react';
+import { lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 
@@ -14,9 +14,10 @@ import LabPage from './pages/LabPage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
 import WritingPage from './pages/WritingPage';
 import BlogPage from './pages/BlogPage';
-import BlogPostPage from './pages/BlogPostPage';
+import BlogRedirect from './pages/BlogRedirect';
 import ElitechPage from './pages/ElitechPage';
 import ContactPage from './pages/ContactPage';
+import NotFoundPage from './pages/NotFoundPage';
 import CVPage from './pages/CVPage';
 import CollaboratePage from './pages/CollaboratePage';
 
@@ -29,7 +30,6 @@ import GuideListPage from './pages/numintel/GuideListPage';
 import GuidePage from './pages/numintel/GuidePage';
 
 // Admin — lazy
-import { AuthProvider } from './contexts/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 const AdminLogin = lazy(() => import('./pages/admin/AdminLogin'));
 const ResetPassword = lazy(() => import('./pages/admin/ResetPassword'));
@@ -40,10 +40,6 @@ const ManageWriting = lazy(() => import('./pages/admin/ManageWriting'));
 const ManageElitech = lazy(() => import('./pages/admin/ManageElitech'));
 const ManageMessages = lazy(() => import('./pages/admin/ManageMessages'));
 const ManageSettings = lazy(() => import('./pages/admin/ManageSettings'));
-
-const PageFallback = () => (
-  <div style={{ minHeight: '100vh', background: 'var(--bg-primary, #06090e)' }} aria-hidden="true" />
-);
 
 export default function AppRoutes() {
   return (
@@ -67,19 +63,12 @@ export default function AppRoutes() {
 
           <Route path="writing" element={<WritingPage />} />
           <Route path="blog" element={<BlogPage />} />
-          <Route path="blog/:slug" element={<BlogPostPage />} />
+          <Route path="blog/:slug" element={<BlogRedirect />} />
           <Route path="cv" element={<CVPage />} />
           <Route path="collaborate" element={<CollaboratePage />} />
           <Route path="elitech" element={<ElitechPage />} />
           <Route path="contact" element={<ContactPage />} />
-          <Route path="*" element={
-            <div className="container" style={{ padding: '20vh 0', textAlign: 'center' }}>
-              <h1 className="gradient-text" style={{ fontSize: '6rem', marginBottom: '1rem' }}>404</h1>
-              <p style={{ fontSize: '1.25rem', color: 'var(--text-secondary)' }}>
-                The page you&apos;re looking for doesn&apos;t exist.
-              </p>
-            </div>
-          } />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
 
         <Route path="/admin/login" element={<AdminLogin />} />

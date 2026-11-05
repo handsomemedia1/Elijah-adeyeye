@@ -35,7 +35,7 @@ export default function ProjectDetailPage() {
     <div className="project-detail page-enter">
       <SEO
         title={`${project.name} — Project`}
-        description={project.description.substring(0, 160)}
+        description={project.description}
         path={`/projects/${project.slug}`}
       />
       <section className="section">
@@ -56,12 +56,18 @@ export default function ProjectDetailPage() {
               <h3>Overview</h3>
               <p className="project-detail__description">{project.description}</p>
               
-              {/* Added placeholders for structure requested by user */}
               <h3>Problem</h3>
-              <p>This project addresses a critical vulnerability in current systems where human factors are often ignored in technical implementations.</p>
-              
-              <h3>Methodology</h3>
-              <p>We utilized a mixed-methods approach, combining technical infrastructure analysis with behavioral profiling to ensure robust defenses.</p>
+              <p>{project.problem}</p>
+
+              <h3>Approach</h3>
+              <ul className="project-detail__list">
+                {project.approach.map(step => <li key={step}>{step}</li>)}
+              </ul>
+
+              <h3>Results</h3>
+              <ul className="project-detail__list">
+                {project.results.map(result => <li key={result}>{result}</li>)}
+              </ul>
 
               <h3>Technologies Used</h3>
               <div className="project-detail__tech">

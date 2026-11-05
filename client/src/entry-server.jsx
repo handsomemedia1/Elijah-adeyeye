@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router';
 import { HelmetProvider } from 'react-helmet-async';
@@ -17,7 +17,9 @@ export function render(url, initialData = null) {
         <AuthProvider>
           <InitialDataProvider data={initialData}>
             <StaticRouter location={url}>
-              <AppRoutes />
+              <Suspense fallback={null}>
+                <AppRoutes />
+              </Suspense>
             </StaticRouter>
           </InitialDataProvider>
         </AuthProvider>
