@@ -1,13 +1,12 @@
-import { useEffect, useState } from 'react';
 import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { HiArrowRight, HiExternalLink, HiStar } from 'react-icons/hi';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useCountUp } from '../hooks/useCountUp';
-import { supabase } from '../lib/supabase';
+import { useElitechBlogs } from '../hooks/useElitechBlogs';
 import {
   siteConfig, publications, aboutSnippet,
-  featuredProjects, researchInterests
+  featuredProjects, researchInterests, elitechPostUrl, elitechImageUrl
 } from '../data/siteData';
 import './HomePage.css';
 
@@ -68,22 +67,7 @@ function ProjectCard({ project }) {
 }
 
 export default function HomePage() {
-  const [personalPosts, setPersonalPosts] = useState([]);
-  const [postsLoading, setPostsLoading] = useState(true);
-
-  useEffect(() => {
-    async function fetchPosts() {
-      const { data } = await supabase
-        .from('portfolio_blog_posts')
-        .select('id, title, slug, excerpt, category, thumbnail, published_at')
-        .eq('published', true)
-        .order('published_at', { ascending: false })
-        .limit(3);
-      setPersonalPosts(data || []);
-      setPostsLoading(false);
-    }
-    fetchPosts();
-  }, []);
+  const { posts: personalPosts, loading: postsLoading } = useElitechBlogs(3);
 
   const [heroRef, heroVisible] = useScrollReveal({ threshold: 0.1 });
   const [aboutRef, aboutVisible] = useScrollReveal();
@@ -95,6 +79,12 @@ export default function HomePage() {
         title={`${siteConfig.name} | ${siteConfig.title}`}
         description={siteConfig.descriptor}
         path="/"
+        jsonLd={[{
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: siteConfig.name,
+          url: 'https://elijahadeyeye.vercel.app',
+        }]}
       />
       {/* ── HERO SECTION ── */}
       <section className="hero" ref={heroRef}>
@@ -225,10 +215,10 @@ export default function HomePage() {
               <div style={{ color: 'var(--text-tertiary)' }}>Loading recent posts...</div>
             ) : personalPosts && personalPosts.length > 0 ? (
               personalPosts.slice(0, 3).map(post => (
-                <Link key={post.id} to={`/blog/${post.slug}`} className="writing__elitech-card glass" style={{ height: '100%', textDecoration: 'none' }}>
+                <a key={post.id} href={elitechPostUrl(post.slug)} target="_blank" rel="noopener noreferrer" className="writing__elitech-card glass" style={{ height: '100%', textDecoration: 'none' }}>
                   {post.thumbnail && (
                     <div className="writing__elitech-card-thumb" style={{ aspectRatio: '16/9', overflow: 'hidden' }}>
-                      <img src={post.thumbnail} alt={post.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                      <img src={elitechImageUrl(post.thumbnail)} alt={post.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>
                   )}
                   <div className="writing__elitech-card-body" style={{ padding: 'var(--space-5)', display: 'flex', flexDirection: 'column', gap: 'var(--space-2)', flexGrow: 1 }}>
@@ -236,10 +226,10 @@ export default function HomePage() {
                     <h3 className="writing__elitech-card-title" style={{ color: 'var(--text-primary)', fontSize: 'var(--text-lg)', fontWeight: 'var(--weight-bold)', lineHeight: 'var(--leading-snug)' }}>{post.title}</h3>
                     <p className="writing__elitech-card-excerpt" style={{ color: 'var(--text-secondary)', fontSize: 'var(--text-sm)', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{post.excerpt}</p>
                     <div className="post-card__meta" style={{ marginTop: 'auto', paddingTop: 'var(--space-4)', fontSize: 'var(--text-xs)', color: 'var(--text-tertiary)' }}>
-                      <span>{new Date(post.published_at).toLocaleDateString()}</span>
+                      <span>{new Date(post.published_at).toLocaleDateString('en-US', { timeZone: 'UTC', month: 'short', day: 'numeric', year: 'numeric' })}</span>
                     </div>
                   </div>
-                </Link>
+                </a>
               ))
             ) : (
               <div style={{ color: 'var(--text-tertiary)' }}>No recent posts available.</div>

@@ -1,15 +1,23 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase';
+import { useInitialData } from '../contexts/InitialDataContext';
+
+const BLOG_AUTHOR = 'Elijah Adeyeye';
+const BLOG_COLUMNS = 'id, title, slug, excerpt, category, author, thumbnail, published_at, views';
+
+function mostViewed(posts) {
+  return posts.length ? [...posts].sort((a, b) => (b.views || 0) - (a.views || 0))[0] : null;
+}
 
 /**
- * Hook to fetch published blog posts from Elitech Hub's Supabase.
- * Table: blog_posts
- * Columns: id, title, slug, excerpt, category, author, thumbnail, published, published_at, views
+ * Elijah's published posts from Elitech Hub (table: blog_posts).
+ * Prerendered pages receive the posts as initial data, then refresh them in the browser.
  */
 export function useElitechBlogs(limit = 20) {
-  const [posts, setPosts] = useState([]);
-  const [trending, setTrending] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const initialPosts = useInitialData()?.elitechPosts?.slice(0, limit) ?? null;
+  const [posts, setPosts] = useState(initialPosts ?? []);
+  const [trending, setTrending] = useState(() => mostViewed(initialPosts ?? []));
+  const [loading, setLoading] = useState(!initialPosts);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -17,25 +25,18 @@ export function useElitechBlogs(limit = 20) {
 
     async function fetchBlogs() {
       try {
-        setLoading(true);
-
-        // Fetch published posts ordered by date
         const { data, error: fetchError } = await supabase
           .from('blog_posts')
-          .select('id, title, slug, excerpt, category, author, thumbnail, published_at, views')
+          .select(BLOG_COLUMNS)
           .eq('published', true)
+          .eq('author', BLOG_AUTHOR)
           .order('published_at', { ascending: false })
           .limit(limit);
 
         if (fetchError) throw fetchError;
         if (!cancelled) {
           setPosts(data || []);
-
-          // The trending post = highest views
-          if (data && data.length > 0) {
-            const sorted = [...data].sort((a, b) => (b.views || 0) - (a.views || 0));
-            setTrending(sorted[0]);
-          }
+          setTrending(mostViewed(data || []));
         }
       } catch (err) {
         console.error('Elitech blog fetch error:', err);

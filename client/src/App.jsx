@@ -7,6 +7,14 @@ import AppRoutes from './AppRoutes';
 
 import { InitialDataProvider } from './contexts/InitialDataContext';
 
+/** Posts embedded at build time. Stored as JSON so the security policy can block inline scripts. */
+function readInitialData() {
+  const element = document.getElementById('initial-data');
+  return element ? JSON.parse(element.textContent) : null;
+}
+
+const initialData = readInitialData();
+
 function PageTracker() {
   usePageTracker();
   return null;
@@ -17,8 +25,6 @@ const PageFallback = () => (
 );
 
 function App() {
-  const initialData = typeof window !== 'undefined' ? window.__INITIAL_DATA__ : null;
-
   useEffect(() => {
     const loader = document.getElementById('initial-loader');
     if (loader) {

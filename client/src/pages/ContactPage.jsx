@@ -15,6 +15,27 @@ const iconMap = {
   academic: FaGraduationCap,
 };
 
+async function postJson(url, body) {
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    return response.ok;
+  } catch {
+    return false;
+  }
+}
+
+function HoneypotField() {
+  return (
+    <div className="contact__hp" aria-hidden="true">
+      <label>Website <input type="text" name="website" tabIndex={-1} autoComplete="off" /></label>
+    </div>
+  );
+}
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -23,17 +44,34 @@ export default function ContactPage() {
     message: ''
   });
   const [status, setStatus] = useState('idle');
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [newsletterStatus, setNewsletterStatus] = useState('idle');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('loading');
-    
-    // Simulate API call for Phase 1
-    setTimeout(() => {
+    // Bots tend to fill every field, so the API discards anything with this hidden field set.
+    const website = new FormData(e.currentTarget).get('website');
+
+    if (await postJson('/api/contact', { ...formData, website })) {
       setStatus('success');
       setFormData({ name: '', email: '', subject: contactSubjects[0], message: '' });
-      setTimeout(() => setStatus('idle'), 3000);
-    }, 1500);
+    } else {
+      setStatus('error');
+    }
+  };
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    setNewsletterStatus('loading');
+    const website = new FormData(e.currentTarget).get('website');
+
+    if (await postJson('/api/subscribe', { email: newsletterEmail, website })) {
+      setNewsletterStatus('success');
+      setNewsletterEmail('');
+    } else {
+      setNewsletterStatus('error');
+    }
   };
 
   const handleChange = (e) => {
@@ -59,12 +97,12 @@ export default function ContactPage() {
       <section className="section">
         <div className="container">
           <div className="contact__grid">
-            
+
             {/* Contact Info Sidebar */}
             <div className="contact__info">
               <div className="glass contact__info-card">
                 <h3 style={{ marginBottom: 'var(--space-6)' }}>Direct Contact</h3>
-                
+
                 <div className="contact__method">
                   <div className="contact__icon-wrapper">
                     <HiMail />
@@ -125,9 +163,23 @@ export default function ContactPage() {
               <div className="glass contact__info-card contact__newsletter">
                 <h3>Newsletter</h3>
                 <p>Get notified when I publish new research or writing.</p>
-                <form className="contact__nl-form" onSubmit={(e) => { e.preventDefault(); alert('Subscribed! (Preview)'); }}>
-                  <input type="email" placeholder="Your email address" required className="form-input" />
-                  <button type="submit" className="btn btn--primary">Subscribe</button>
+                <form className="contact__nl-form" onSubmit={handleSubscribe}>
+                  <HoneypotField />
+                  <input
+                    type="email"
+                    aria-label="Your email address"
+                    placeholder="Your email address"
+                    required
+                    maxLength={254}
+                    className="form-input"
+                    value={newsletterEmail}
+                    onChange={(e) => { setNewsletterEmail(e.target.value); setNewsletterStatus('idle'); }}
+                  />
+                  <button type="submit" className="btn btn--primary" disabled={newsletterStatus === 'loading'}>
+                    {newsletterStatus === 'loading' ? 'Subscribing...' : 'Subscribe'}
+                  </button>
+                  {newsletterStatus === 'success' && <p className="form-success" role="status">You're subscribed. Thank you!</p>}
+                  {newsletterStatus === 'error' && <p className="form-error" role="alert">That didn't work. Please try again in a moment.</p>}
                 </form>
               </div>
             </div>
@@ -136,16 +188,17 @@ export default function ContactPage() {
             <div className="glass-strong contact__form-container">
               <h2>Send a Message</h2>
               <p className="contact__form-desc">Fill out the form below and I'll get back to you as soon as possible.</p>
-              
+
               <form onSubmit={handleSubmit} className="contact__form">
+                <HoneypotField />
                 <div className="form-group grid-2">
                   <div className="form-field">
                     <label htmlFor="name">Name</label>
-                    <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required className="form-input" placeholder="John Doe" />
+                    <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required maxLength={100} className="form-input" placeholder="John Doe" />
                   </div>
                   <div className="form-field">
                     <label htmlFor="email">Email</label>
-                    <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required className="form-input" placeholder="john@example.com" />
+                    <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required maxLength={254} className="form-input" placeholder="john@example.com" />
                   </div>
                 </div>
 
@@ -162,22 +215,25 @@ export default function ContactPage() {
 
                 <div className="form-field">
                   <label htmlFor="message">Message</label>
-                  <textarea id="message" name="message" value={formData.message} onChange={handleChange} required className="form-input" rows="6" placeholder="Your message here..."></textarea>
+                  <textarea id="message" name="message" value={formData.message} onChange={handleChange} required maxLength={5000} className="form-input" rows="6" placeholder="Your message here..."></textarea>
                 </div>
 
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className={`btn btn--primary btn--large ${status === 'loading' ? 'btn--loading' : ''}`}
-                  disabled={status === 'loading' || status === 'success'}
+                  disabled={status === 'loading'}
                   style={{ width: '100%', justifyContent: 'center' }}
                 >
-                  {status === 'loading' ? 'Sending...' : 
-                   status === 'success' ? 'Message Sent!' : 
-                   <><HiMail /> Send Message</>}
+                  {status === 'loading' ? 'Sending...' : <><HiMail /> Send Message</>}
                 </button>
-                
+
                 {status === 'success' && (
-                  <p className="form-success">Thank you! Your message has been sent successfully.</p>
+                  <p className="form-success" role="status">Thank you! Your message has been sent.</p>
+                )}
+                {status === 'error' && (
+                  <p className="form-error" role="alert">
+                    Your message couldn't be sent. Please email <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a> directly.
+                  </p>
                 )}
               </form>
             </div>

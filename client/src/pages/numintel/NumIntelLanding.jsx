@@ -20,6 +20,16 @@ export default function NumIntelLanding() {
         title="NumIntel — International Phone Number Intelligence"
         description="Validate, format and understand phone numbers across international numbering systems. Privacy-first phone intelligence."
         path="/numintel"
+        jsonLd={[{
+          '@context': 'https://schema.org',
+          '@type': 'WebApplication',
+          name: 'NumIntel',
+          url: 'https://elijahadeyeye.vercel.app/numintel',
+          description: 'Validate, format and understand phone numbers across international numbering systems.',
+          applicationCategory: 'UtilitiesApplication',
+          operatingSystem: 'Any',
+          author: { '@type': 'Person', name: 'Elijah Adeyeye', url: 'https://elijahadeyeye.vercel.app' },
+        }]}
       />
       
       <section className="page-hero">

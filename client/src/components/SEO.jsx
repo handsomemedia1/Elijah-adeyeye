@@ -3,6 +3,23 @@ import { siteConfig } from '../data/siteData';
 
 const BASE_URL = 'https://elijahadeyeye.vercel.app';
 const DEFAULT_IMAGE = `${BASE_URL}/assets/images/profile/profile.jpg`;
+const TITLE_SUFFIX = ' | Elijah Adeyeye';
+const MAX_TITLE_LENGTH = 60;
+const MAX_DESCRIPTION_LENGTH = 160;
+
+/** Adds the site name only when the title doesn't have it and there's room in search results. */
+function buildTitle(title, path) {
+  const skipSuffix = path === '/' || title.includes('|') || title.includes('Elijah Adeyeye')
+    || (title + TITLE_SUFFIX).length > MAX_TITLE_LENGTH;
+  return skipSuffix ? title : title + TITLE_SUFFIX;
+}
+
+/** Shortens at a word boundary so search results don't show half a word. */
+function buildDescription(description) {
+  if (!description || description.length <= MAX_DESCRIPTION_LENGTH) return description;
+  const cut = description.slice(0, MAX_DESCRIPTION_LENGTH - 1);
+  return `${cut.slice(0, cut.lastIndexOf(' '))}…`;
+}
 
 /**
  * SEO — injects page-level meta, OG, Twitter, canonical, and JSON-LD schemas.
@@ -26,7 +43,8 @@ export default function SEO({
   noindex = false,
 }) {
   const url = `${BASE_URL}${path}`;
-  const fullTitle = path === '/' ? title : `${title} | Elijah Adeyeye`;
+  const fullTitle = buildTitle(title, path);
+  const metaDescription = buildDescription(description);
   const ogImage = image || DEFAULT_IMAGE;
 
   // Default Person schema — always present
@@ -46,7 +64,7 @@ export default function SEO({
     worksFor: {
       '@type': 'Organization',
       name: 'Elitech Hub',
-      url: 'https://elitechub.com',
+      url: siteConfig.elitechUrl,
     },
     alumniOf: {
       '@type': 'CollegeOrUniversity',
@@ -66,25 +84,26 @@ export default function SEO({
     <Helmet>
       {/* Core */}
       <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <link rel="canonical" href={url} />
+      {metaDescription && <meta name="description" content={metaDescription} />}
+      {!noindex && <link rel="canonical" href={url} />}
       {noindex && <meta name="robots" content="noindex, nofollow" />}
 
       {/* Open Graph */}
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
+      {metaDescription && <meta property="og:description" content={metaDescription} />}
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:alt" content={`${siteConfig.name} — ${title}`} />
       <meta property="og:site_name" content="Elijah Adeyeye" />
       <meta property="og:locale" content="en_GB" />
 
       {/* Twitter / X */}
-      <meta name="twitter:card" content="summary_large_image" />
+      {/* The default photo is too small for a large card. */}
+      <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
       <meta name="twitter:url" content={url} />
       <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
+      {metaDescription && <meta name="twitter:description" content={metaDescription} />}
       <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:site" content="@elijahadeyeye" />
       <meta name="twitter:creator" content="@elijahadeyeye" />

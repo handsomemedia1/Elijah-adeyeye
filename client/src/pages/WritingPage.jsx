@@ -3,7 +3,7 @@ import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { HiArrowRight, HiExternalLink, HiEye } from 'react-icons/hi';
 import { FaLinkedinIn } from 'react-icons/fa6';
-import { blogPosts } from '../data/siteData';
+import { blogPosts, elitechImageUrl, elitechPostUrl } from '../data/siteData';
 import { useElitechBlogs } from '../hooks/useElitechBlogs';
 import './WritingPage.css';
 
@@ -81,7 +81,7 @@ export default function WritingPage() {
                   {/* Trending Post */}
                   {trending && typeFilter !== 'linkedin' && (
                     <a
-                      href={`https://elitechub.com/blog-posts/${trending.slug}.html`}
+                      href={elitechPostUrl(trending.slug)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="writing__trending glass"
@@ -89,7 +89,7 @@ export default function WritingPage() {
                       <div className="writing__trending-badge">🔥 Trending on Elitech Hub</div>
                       {trending.thumbnail && (
                         <div className="writing__trending-thumb">
-                          <img src={trending.thumbnail} alt={trending.title} />
+                          <img src={elitechImageUrl(trending.thumbnail)} alt={trending.title} />
                         </div>
                       )}
                       <div className="writing__trending-content">
@@ -97,7 +97,7 @@ export default function WritingPage() {
                         <h2 className="writing__trending-title">{trending.title}</h2>
                         <p className="writing__trending-excerpt">{trending.excerpt}</p>
                         <div className="post-card__meta">
-                          <span>{new Date(trending.published_at).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+                          <span>{new Date(trending.published_at).toLocaleDateString('en-US', { timeZone: 'UTC', month: 'long', day: 'numeric', year: 'numeric' })}</span>
                           {trending.views > 0 && (
                             <span className="writing__views"><HiEye /> {trending.views} views</span>
                           )}
@@ -111,14 +111,14 @@ export default function WritingPage() {
                     {elitechPosts.filter(p => !trending || p.id !== trending.id).map(post => (
                       <a
                         key={post.id}
-                        href={`https://elitechub.com/blog-posts/${post.slug}.html`}
+                        href={elitechPostUrl(post.slug)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="writing__elitech-card glass"
                       >
                         {post.thumbnail && (
                           <div className="writing__elitech-card-thumb">
-                            <img src={post.thumbnail} alt={post.title} />
+                            <img src={elitechImageUrl(post.thumbnail)} alt={post.title} />
                           </div>
                         )}
                         <div className="writing__elitech-card-body">
@@ -126,7 +126,7 @@ export default function WritingPage() {
                           <h3 className="writing__elitech-card-title">{post.title}</h3>
                           <p className="writing__elitech-card-excerpt">{post.excerpt}</p>
                           <div className="post-card__meta">
-                            <span>{new Date(post.published_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                            <span>{new Date(post.published_at).toLocaleDateString('en-US', { timeZone: 'UTC', month: 'short', day: 'numeric', year: 'numeric' })}</span>
                             {post.views > 0 && (
                               <span className="writing__views"><HiEye /> {post.views}</span>
                             )}
@@ -166,7 +166,7 @@ export default function WritingPage() {
                   <h2 className="writing__featured-title">{featured.title}</h2>
                   <p className="writing__featured-excerpt">{featured.excerpt}</p>
                   <div className="post-card__meta">
-                    <span>{new Date(featured.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+                    <span>{new Date(featured.date).toLocaleDateString('en-US', { timeZone: 'UTC', month: 'long', day: 'numeric', year: 'numeric' })}</span>
                     <span>{featured.readTime}</span>
                   </div>
                 </div>
@@ -188,7 +188,7 @@ export default function WritingPage() {
                         )}
                       </div>
                       <div className="post-card__meta">
-                        <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                        <span>{new Date(post.date).toLocaleDateString('en-US', { timeZone: 'UTC', month: 'short', day: 'numeric', year: 'numeric' })}</span>
                         <span>{post.readTime}</span>
                       </div>
                     </div>

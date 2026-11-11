@@ -3,12 +3,12 @@
 export const siteConfig = {
   name: 'Elijah Adeyeye',
   title: 'AI, Behavioural & Cybersecurity Researcher',
-  tagline: 'Founder & Lead Instructor, Elitech Hub',
+  tagline: 'Founder & CEO, Elitech Hub',
   descriptor: "Researching the intersection of artificial intelligence, human behaviour, security, and high-stakes decision-making.",
   email: 'elijahadeyeye@proton.me',
   emailAlt: 'elijah@elitechub.com',
   phone: '+234 708 196 8062',
-  location: 'Abuja, Nigeria',
+  location: 'Oyo State, Nigeria',
   github: 'handsomemedia1',
   githubUrl: 'https://github.com/handsomemedia1',
   linkedin: 'https://linkedin.com/in/adeyeye-elijah',
@@ -17,9 +17,14 @@ export const siteConfig = {
   telegram: 'https://t.me/Elitechub',
   threads: 'https://threads.net/@elijahadeyeye',
   facebook: 'https://facebook.com/elijahadeyeye',
-  elitechUrl: 'https://elitechub.com',
+  elitechUrl: 'https://www.elitechub.com',
   cvUrl: '/assets/docs/elijah_adeyeye_cv.pdf',
 };
+
+export const elitechBlogUrl = 'https://www.elitechub.com/blog';
+export const elitechPostUrl = (slug) => `${elitechBlogUrl}/${slug}`;
+// Some Elitech Hub posts store thumbnails as paths on that site.
+export const elitechImageUrl = (src) => (src?.startsWith('/') ? `${siteConfig.elitechUrl}${src}` : src);
 
 export const navLinks = [
   { path: '/', label: 'Home' },
@@ -33,17 +38,17 @@ export const navLinks = [
 ];
 
 export const stats = [
-  { value: 50, suffix: '+', label: 'Students Trained' },
+  { value: 200, suffix: '+', label: 'Students Trained' },
   { value: 5, suffix: '+', label: 'Years Experience' },
   { value: 2, suffix: '', label: 'Peer-Reviewed Manuscripts' },
   { value: 1, suffix: '', label: 'APA 2026 Convention Session' },
 ];
 
-export const biography = `Elijah Adeyeye is a cybersecurity researcher, behavioral scientist, and founder based in Abuja, Nigeria. He holds a Bachelor of Education in Guidance and Counselling with Mathematics from the University of Ibadan and is a certified Counselling Psychologist. His professional practice is built on a rare intersection: the technical depth of offensive and defensive security and the psychological insight of behavioral research.
+export const biography = `Elijah Adeyeye is a cybersecurity researcher, behavioral scientist, and founder based in Oyo State, Nigeria. He holds a Bachelor of Education in Guidance and Counselling with Mathematics from the University of Ibadan and is a certified Counselling Psychologist. His professional practice is built on a rare intersection: the technical depth of offensive and defensive security and the psychological insight of behavioral research.
 
-He is the founder and CEO of Elitech Hub, a CAC and SMEDAN registered cybersecurity training company that trains security professionals with an emphasis on both technical and behavioral security competencies. Elitech Hub has trained 50+ students and maintains active programs in cybersecurity fundamentals, threat modeling, and digital forensics.
+He is the founder and CEO of Elitech Hub, a CAC and SMEDAN registered cybersecurity training company that trains security professionals with an emphasis on both technical and behavioral security competencies. Elitech Hub has trained 200+ students and maintains active programs in cybersecurity fundamentals, threat modeling, and digital forensics.
 
-Elijah is a co-author on two peer-reviewed manuscripts currently under review at Springer Nature and SAGE Publications, and a co-author on a session accepted for the APA 2026 Annual Convention in Washington, D.C. His research work is conducted in collaboration with Dr. Olasunkanmi Kehinde at Norfolk State University.
+Elijah is a co-author of a peer-reviewed paper published in the Journal of Technology in Behavioral Science (Springer Nature, 2026), a manuscript under review at Trauma, Violence, & Abuse (SAGE Publications), and a session accepted for the APA 2026 Annual Convention in Washington, D.C. His research work is conducted in collaboration with Dr. Olasunkanmi Kehinde at Norfolk State University.
 
 Beyond research, Elijah is an active builder — developing autonomous AI systems, security tools, and digital infrastructure for organizations across Nigeria and internationally. He maintains deep expertise in low-level systems programming (assembly, C++, UEFI) and agentic AI development, and is fluent across the full web stack.`;
 
@@ -96,10 +101,12 @@ export const publications = [
     publisher: 'Springer Nature',
     status: 'Published',
     publishedDate: '2026-05-27',
+    doi: '10.1007/s41347-026-00652-0',
+    correctionDoi: '10.1007/s41347-026-00674-8',
     submitted: 'May 2026',
     abstract: 'This study investigates the capacity of artificial intelligence systems to express empathetic responses within the context of mental health dialogues. Using computational analysis of large-scale therapy conversation datasets, we examine the linguistic and emotional markers that distinguish empathetic AI responses from human therapist interactions. Our findings reveal nuanced patterns in how AI systems can approximate empathetic engagement while highlighting fundamental differences in emotional authenticity and contextual understanding.',
     keywords: ['AI empathy', 'mental health', 'NLP', 'computational psychology', 'human-AI interaction'],
-    citation: 'Kehinde, O., Adeyeye, E., Ayanwale, M. A., & Mojoyinola, M. O. (2026). Can AI express empathy? Computational insights from mental health dialogues. Journal of Technology in Behavioral Science. Published.',
+    citation: 'Kehinde, O., Adeyeye, E., Ayanwale, M. A., & Mojoyinola, M. O. (2026). Can AI express empathy? Computational insights from mental health dialogues. Journal of Technology in Behavioral Science. https://doi.org/10.1007/s41347-026-00652-0',
     type: 'journal',
     researchPillar: 'ai-evaluation',
   },
@@ -166,7 +173,7 @@ export const timeline = [
   {
     title: 'Founder & CEO',
     company: 'Elitech Hub',
-    period: '2021 – Present',
+    period: '2023 – Present',
     description: 'Founded a CAC and SMEDAN registered cybersecurity training company that trains security professionals with emphasis on technical and behavioral security competencies.',
     current: true,
     highlight: true,
@@ -244,20 +251,6 @@ export const testimonials = [
     "image": "/assets/images/testimonials/testimonial-2.jpg"
   },
   {
-    "id": 3,
-    "name": "Folake Adebayo",
-    "role": "Security Analyst, Technology reserve Solutions",
-    "content": "As a student in Elijah's cybersecurity program at Elitech Hub, I gained not just technical skills but a completely new way of thinking about security. His behavioral approach to cybersecurity has been invaluable in my career.",
-    "image": "/assets/images/testimonials/testimonial-3.jpg"
-  },
-  {
-    "id": 4,
-    "name": "Umar Abba",
-    "role": "Cyber security/Forensics Analyst",
-    "content": "Elijah Adeyeye Sir, demonstrates a rare blend of passion, discipline, and curiosity that defines a promising cybersecurity professional. His dedication to mastering both technical and strategic aspects of cybersecurity is evident in every project he undertakes. Elijah Adeyeye Sir services reflect a commitment to excellence, thorough research, and practical problem solving. As a cybersecurity mentee under the mentorship of Elijah Adeyeye Sir, I, Umar Abba, go beyond just teaching; he empowers others with the mindset and tools needed to think critically, act ethically, and adapt in an ever-evolving threat landscape. His ability to simplify complex concepts while staying current with industry trends makes him a valuable guide for those entering the field. Elijah Adeyeye Sir drive to make a real impact in cybersecurity is not only admirable, it's inspiring.",
-    "image": "/assets/images/testimonials/testimonial-4.jpg"
-  },
-  {
     "id": 5,
     "name": "Chukwuemeka Noble Odoh.",
     "role": "ICS/OI Cybersecurity",
@@ -270,13 +263,6 @@ export const testimonials = [
     "role": "Security Analyst",
     "content": "I'm truly happy to have you as my mentor, because I can't imagine an alternative to you sir. I see the practicality of your role in play, raging from the expertise of practicing your role with high professionality and so much competence. Your method and forms of engagement has made me discover purpose with in my career of Cyber Security. I appreciate all your selfless services sir. Thank You Adeyeye Elijah @LordHandsome.",
     "image": "/assets/images/testimonials/testimonial-6.jpg"
-  },
-  {
-    "id": 7,
-    "name": "Prof. Emmanuel Adejumo",
-    "role": "Research Director, Institute for Data Innovation",
-    "content": "Elijah's data analysis work for our research project exceeded all expectations. His statistical expertise combined with clear visualizations made our findings accessible to both academic and general audiences. His business analytics skills translated complex patterns into actionable insights that directly informed our organizational strategy.",
-    "image": "/assets/images/testimonials/testimonial-7.jpg"
   },
   {
     "id": 8,
@@ -388,7 +374,19 @@ export const featuredProjects = [
   {
     name: 'Behavioral Phishing Detection',
     description: 'AI model that analyzes linguistic patterns to detect phishing attempts with 94% accuracy. Uses NLP and machine learning to identify social engineering tactics in email content.',
-    tech: ['Python', 'NLP', 'Machine Learning', 'Scikit-learn'],
+    problem: 'Phishing works by manipulating people: urgency, threats and authority cues push a reader to act before thinking. Checks that only look for known bad senders or links can miss a new message built on those same tactics.',
+    approach: [
+      'Parses and cleans raw email content before analysis.',
+      'Extracts linguistic features covering text statistics, readability, urgency language, grammar and sentiment.',
+      'Analyzes embedded URLs for signs of suspicious links.',
+      'Trains and compares Random Forest and SVM classifiers, keeping the best model by F1 score.',
+      'Serves predictions through a Flask web interface and a command-line tool.',
+    ],
+    results: [
+      'Random Forest was the best model, with 94% accuracy and a 0.94 F1 score on test data.',
+      '95% precision, 93% recall and 0.96 ROC AUC.',
+    ],
+    tech: ['Python', 'spaCy', 'NLTK', 'Scikit-learn', 'Flask', 'Pandas'],
     github: 'https://github.com/handsomemedia1/Behavioral-Phishing-Detection',
     category: 'Cybersecurity',
     researchPillar: 'behavioural-cybersecurity',
@@ -396,17 +394,39 @@ export const featuredProjects = [
   {
     name: 'Cross-Platform Fraud Detection System',
     description: 'Real-time suspicious activity monitoring system using PowerShell, enabling cross-system correlation with 90% faster incident detection compared to manual auditing.',
-    tech: ['PowerShell', 'SQL', 'Real-time Monitoring'],
+    problem: 'Signs of fraud and account compromise are often scattered across separate systems: a Windows sign-in, a command on a network device, a query on a database. Reviewed one log at a time, each event can look routine. The suspicious sequence only appears when they are correlated.',
+    approach: [
+      'Collects logs from Windows event logs, network devices over SSH, and SQL Server audit data.',
+      'Normalizes the different log formats into one structure.',
+      'Orders each user\'s activity by time and flags actions across different systems within a short window.',
+      'Applies configurable, severity-rated rules, including rapid cross-system access (3-second threshold), after-hours database access, and a failed login followed by a success.',
+      'Presents findings in a local monitoring dashboard.',
+    ],
+    results: [
+      'Correlates activity across Windows, network and database sources in one workflow.',
+      '90% faster incident detection compared to manual auditing.',
+    ],
+    tech: ['PowerShell', 'Posh-SSH', 'SQL Server', 'Windows Event Logs'],
     github: 'https://github.com/handsomemedia1/FraudAnalysis-',
     category: 'Cybersecurity',
     researchPillar: 'ai-cybersecurity',
   },
   {
     name: 'Elitech Hub Platform',
-    description: 'Full-stack cybersecurity training platform with blog system, research portal, and community features. Built with modern web technologies.',
-    tech: ['React', 'Node.js', 'Vercel'],
-    github: 'https://github.com/handsomemedia1/Elitech-Hub',
-    demo: 'https://elitech-hub.vercel.app',
+    description: 'Full-stack cybersecurity training platform with blog, research portal, and community features. Built with Next.js, TypeScript and Supabase.',
+    problem: 'A cybersecurity training company needs more than a brochure site. Learners need to find programmes, apply and pay, while the team needs to publish research and articles in one place.',
+    approach: [
+      'Built programme, application, coaching and consultation journeys in Next.js and TypeScript.',
+      'Added a multi-author blog, plus research and lab sections, backed by Supabase.',
+      'Integrated Paystack for payments and Resend for transactional email.',
+    ],
+    results: [
+      'Live at elitechub.com.',
+      'Publishing 60+ articles on cybersecurity careers, tools and threats.',
+    ],
+    tech: ['Next.js', 'TypeScript', 'Supabase', 'Paystack', 'Resend', 'Vercel'],
+    github: 'https://github.com/handsomemedia1/Elitech-Hub-Next',
+    demo: 'https://www.elitechub.com',
     category: 'Web Dev',
     researchPillar: null,
   },

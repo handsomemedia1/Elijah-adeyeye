@@ -1,16 +1,21 @@
-# React + Vite
+# Elijah Adeyeye Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal site built with React and Vite, hosted on Vercel. Pages are prerendered to static HTML at build time so search engines can read them.
 
-Currently, two official plugins are available:
+## Commands
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- `npm run dev`: start the local dev server
+- `npm run build:full`: build the site and prerender every page into `dist`
+- `npm run lint`: run ESLint
 
-## React Compiler
+## Adding a page
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Add the route to `src/AppRoutes.jsx` and to `ROUTES_TO_PRERENDER` in `prerender.mjs`. Routes missing from that list return a 404 in production and aren't in the sitemap. The sitemap is generated from the same list.
 
-## Expanding the ESLint configuration
+## Environment variables (Vercel)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `RESEND_API_KEY` and `RESEND_FROM_EMAIL`: send contact form messages
+
+## Database setup
+
+Run `supabase/portfolio_newsletter_subscribers.sql` once in the Supabase SQL Editor to enable the newsletter form.
