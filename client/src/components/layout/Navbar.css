@@ -11,7 +11,7 @@
 }
 
 .navbar--scrolled {
-  background: var(--glass-bg);
+  background: color-mix(in srgb, var(--bg-primary) 78%, transparent);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border-bottom: 1px solid var(--glass-border);

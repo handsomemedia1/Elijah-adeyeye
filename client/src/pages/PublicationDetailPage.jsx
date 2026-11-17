@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import { absoluteUrl, PERSON_ID } from '../config/site';
 import { publications, researchInterests } from '../data/siteData';
 import { HiArrowLeft, HiExternalLink, HiClipboardCopy, HiCheck } from 'react-icons/hi';
 import { useState, useEffect } from 'react';
@@ -33,31 +34,24 @@ export default function PublicationDetailPage() {
   };
 
   const articleSchema = {
-    '@context': 'https://schema.org',
     '@type': 'ScholarlyArticle',
+    '@id': `${absoluteUrl(`/publications/${publication.slug}`)}#article`,
     headline: publication.title,
-    author: publication.authors.map(author => ({
-      '@type': 'Person',
-      name: author
-    })),
+    author: publication.authors.map(author => (
+      author === publication.highlightedAuthor ? { '@id': PERSON_ID } : { '@type': 'Person', name: author }
+    )),
+    abstract: publication.abstract,
+    inLanguage: 'en',
     datePublished: publication.publishedDate || publication.submitted,
     publisher: {
       '@type': 'Organization',
       name: publication.publisher
     },
     identifier: publication.doi ? `doi:${publication.doi}` : undefined,
-    url: `https://elijahadeyeye.vercel.app/publications/${publication.slug}`
+    sameAs: publication.doi ? `https://doi.org/${publication.doi}` : undefined,
+    url: absoluteUrl(`/publications/${publication.slug}`),
   };
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://elijahadeyeye.vercel.app' },
-      { '@type': 'ListItem', position: 2, name: 'Publications', item: 'https://elijahadeyeye.vercel.app/publications' },
-      { '@type': 'ListItem', position: 3, name: publication.title, item: `https://elijahadeyeye.vercel.app/publications/${publication.slug}` }
-    ]
-  };
 
   return (
     <div className="pub-detail page-enter">
@@ -66,7 +60,7 @@ export default function PublicationDetailPage() {
         description={publication.abstract}
         path={`/publications/${publication.slug}`}
         type="article"
-        jsonLd={[articleSchema, breadcrumbSchema]}
+        jsonLd={[articleSchema]}
       />
       <section className="section">
         <div className="container pub-detail__inner">

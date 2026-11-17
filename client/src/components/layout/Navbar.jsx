@@ -23,7 +23,7 @@ export default function Navbar() {
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="navbar__inner container">
         <Link to="/" className="navbar__logo" onClick={() => setMobileOpen(false)}>
-          <img src="/assets/images/profile/profile.jpg" alt="EA" className="navbar__logo-img" style={{ width: '40px', height: '40px', borderRadius: '50%', objectFit: 'cover' }} />
+          <img src="/assets/images/profile/profile.jpg" alt="" width="40" height="40" className="navbar__logo-img" style={{ width: '40px', height: '40px', borderRadius: '50%', objectFit: 'cover' }} />
           <span className="navbar__logo-text">Elijah</span>
         </Link>
 

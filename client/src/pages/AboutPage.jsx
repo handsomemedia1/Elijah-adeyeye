@@ -33,10 +33,11 @@ export default function AboutPage() {
         title="About Elijah Adeyeye"
         description="Elijah Adeyeye: B.Ed University of Ibadan, certified counselling psychologist, founder of Elitech Hub, with advanced cybersecurity certifications."
         path="/about"
+        pageType="ProfilePage"
       />
       {/* Page Header */}
       <section className="page-hero">
-        <div className="mesh-background" style={{ backgroundImage: "url('/assets/images/backgrounds/hero_bg_about_1776720215519.png')", backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.3, filter: 'brightness(0.6) contrast(1.2)' }} />
+        <div className="mesh-background" style={{ backgroundImage: "url('/assets/images/backgrounds/hero_bg_about_1776720215519.webp')", backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.3, filter: 'brightness(0.6) contrast(1.2)' }} />
         <div className="container page-hero__inner">
           <span className="section-header__label">About</span>
           <h1 className="page-hero__title">About <span className="gradient-text">Elijah</span></h1>

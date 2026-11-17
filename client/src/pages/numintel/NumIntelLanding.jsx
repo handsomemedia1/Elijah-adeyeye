@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../../components/SEO';
+import { absoluteUrl, PERSON_ID } from '../../config/site';
 import NumIntelTool from '../../components/numintel/NumIntelTool';
 import LeaderBoard from '../../components/numintel/LeaderBoard';
 import { useReports } from '../../hooks/useReports';
@@ -21,14 +22,19 @@ export default function NumIntelLanding() {
         description="Validate, format and understand phone numbers across international numbering systems. Privacy-first phone intelligence."
         path="/numintel"
         jsonLd={[{
-          '@context': 'https://schema.org',
           '@type': 'WebApplication',
+          '@id': `${absoluteUrl('/numintel')}#app`,
           name: 'NumIntel',
-          url: 'https://elijahadeyeye.vercel.app/numintel',
+          url: absoluteUrl('/numintel'),
           description: 'Validate, format and understand phone numbers across international numbering systems.',
           applicationCategory: 'UtilitiesApplication',
-          operatingSystem: 'Any',
-          author: { '@type': 'Person', name: 'Elijah Adeyeye', url: 'https://elijahadeyeye.vercel.app' },
+          applicationSubCategory: 'Phone number validation',
+          operatingSystem: 'Any (web browser)',
+          browserRequirements: 'Requires JavaScript',
+          isAccessibleForFree: true,
+          offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+          featureList: ['Phone number validation', 'E.164 formatting', 'International and national formats', 'Country and line type detection'],
+          author: { '@id': PERSON_ID },
         }]}
       />
       

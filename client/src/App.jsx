@@ -4,6 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { AuthProvider } from './contexts/AuthContext';
 import { usePageTracker } from './hooks/usePageTracker';
 import AppRoutes from './AppRoutes';
+import SmoothScroll from './components/SmoothScroll';
 
 import { InitialDataProvider } from './contexts/InitialDataContext';
 
@@ -42,6 +43,7 @@ function App() {
         <InitialDataProvider data={initialData}>
           <BrowserRouter>
             <PageTracker />
+            <SmoothScroll />
             <Suspense fallback={<PageFallback />}>
               <AppRoutes />
             </Suspense>

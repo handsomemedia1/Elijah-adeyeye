@@ -25,6 +25,7 @@ export default function PublicationsPage() {
         title="Publications — Research Papers"
         description="Published research in AI empathy, online trauma, and measurement equivalence."
         path="/publications"
+        pageType="CollectionPage"
       />
       <section className="page-hero">
         <div className="mesh-background" style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(99, 210, 170, 0.05) 0%, transparent 50%)' }} />

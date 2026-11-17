@@ -30,9 +30,9 @@ export const navLinks = [
   { path: '/', label: 'Home' },
   { path: '/lab', label: 'Lab' },
   { path: '/numintel', label: 'NumIntel' },
-  { path: '/publications', label: 'Publications' },
-  { path: '/writing', label: 'Writing' },
   { path: '/research', label: 'Research' },
+  { path: '/publications', label: 'Publications' },
+  { path: '/blog', label: 'Blog' },
   { path: '/elitech', label: 'Elitech Hub' },
   { path: '/contact', label: 'Contact' },
 ];

@@ -7,6 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createServer } from 'vite';
 import { createClient } from '@supabase/supabase-js';
+import { readPageMeta, writeSitemap, writeRobots, writeLlms } from './seo-files.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -33,7 +34,6 @@ const ROUTES_TO_PRERENDER = [
   '/projects/behavioral-phishing-detection',
   '/projects/cross-platform-fraud-detection-system',
   '/projects/elitech-hub-platform',
-  '/writing',
   '/blog',
   '/elitech',
   '/contact',
@@ -56,10 +56,9 @@ const ROUTES_TO_PRERENDER = [
   '/numintel/guides/phone-number-validation',
 ];
 
-const BASE_URL = 'https://elijahadeyeye.vercel.app';
 const DIST = path.resolve(__dirname, 'dist');
 // Pages that show blog posts, so the posts are in their HTML for search engines.
-const ROUTES_WITH_POSTS = new Set(['/', '/blog', '/writing']);
+const ROUTES_WITH_POSTS = new Set(['/', '/blog']);
 // React 19 renders page metadata and image preloads inside the app; they belong in <head>.
 // JSON-LD scripts stay put: React expects them in place when it hydrates, and search engines read them anywhere.
 const HEAD_TAG = /<title[^>]*>[\s\S]*?<\/title>|<meta\b[^>]*>|<link\b[^>]*>/g;
@@ -92,14 +91,6 @@ function withoutShellDefaults(template) {
     .replace(/<div id="initial-loader">[\s\S]*?<\/style>\s*<\/div>\s*/, '');
 }
 
-function writeSitemap() {
-  const urls = ROUTES_TO_PRERENDER.map((route) => `  <url><loc>${BASE_URL}${route === '/' ? '' : route}</loc></url>`).join('\n');
-  fs.writeFileSync(
-    path.join(DIST, 'sitemap.xml'),
-    `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`
-  );
-}
-
 async function prerender() {
   console.log('\n📡 Starting prerender...\n');
 
@@ -117,6 +108,7 @@ async function prerender() {
   });
 
   const failures = [];
+  const pages = [];
 
   for (const url of ROUTES_TO_PRERENDER) {
     try {
@@ -142,6 +134,8 @@ async function prerender() {
         .replace('<div id="root"></div>', () => `<div id="root">${appHtml}</div>`)
         .replace('</head>', () => `  ${headTags.filter(Boolean).join('\n    ')}\n  </head>`);
 
+      pages.push({ route: url, ...readPageMeta(headTags.join('\n')) });
+
       const outPath = path.join(DIST, url === '/' ? '' : url, 'index.html');
       fs.mkdirSync(path.dirname(outPath), { recursive: true });
       fs.writeFileSync(outPath, finalHtml);
@@ -152,8 +146,22 @@ async function prerender() {
     }
   }
 
+  const data = {
+    ...(await vite.ssrLoadModule('/src/data/siteData.js')),
+    ...(await vite.ssrLoadModule('/src/data/numintelGuides.js')),
+    ...(await vite.ssrLoadModule('/src/data/numintelCountries.js')),
+    elitechPosts,
+  };
   await vite.close();
-  writeSitemap();
+
+  // Pages whose content has a known review date get it in the sitemap.
+  const lastModified = Object.fromEntries([
+    ...data.numintelGuides.map((g) => [`/numintel/guides/${g.slug}`, g.lastUpdated]),
+    ...data.numintelCountries.map((c) => [`/numintel/countries/${c.slug}`, c.lastVerified]),
+  ]);
+  writeSitemap(DIST, ROUTES_TO_PRERENDER, lastModified);
+  writeRobots(DIST);
+  writeLlms(DIST, pages, data);
 
   // Vercel serves this with a 404 status. It stays unrendered so the app can show the right message for any URL.
   fs.writeFileSync(

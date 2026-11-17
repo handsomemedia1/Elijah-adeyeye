@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import SEO from '../../components/SEO';
+import { absoluteUrl, PERSON_ID } from '../../config/site';
 import { numintelGuides } from '../../data/numintelGuides';
 import '../NumIntelPage.css';
 
@@ -24,13 +25,17 @@ export default function GuidePage() {
         path={`/numintel/guides/${guide.slug}`}
         type="article"
         jsonLd={[{
-          '@context': 'https://schema.org',
-          '@type': 'Article',
+          '@type': 'TechArticle',
+          '@id': `${absoluteUrl(`/numintel/guides/${guide.slug}`)}#article`,
           headline: guide.title,
           description: guide.description,
           dateModified: guide.lastUpdated,
-          url: `https://elijahadeyeye.vercel.app/numintel/guides/${guide.slug}`,
-          author: { '@type': 'Person', name: 'Elijah Adeyeye', url: 'https://elijahadeyeye.vercel.app' },
+          url: absoluteUrl(`/numintel/guides/${guide.slug}`),
+          mainEntityOfPage: { '@id': `${absoluteUrl(`/numintel/guides/${guide.slug}`)}#webpage` },
+          inLanguage: 'en-GB',
+          author: { '@id': PERSON_ID },
+          publisher: { '@id': PERSON_ID },
+          isPartOf: { '@id': `${absoluteUrl('/numintel')}#app` },
         }]}
       />
       

@@ -15,6 +15,7 @@ export default function CountryListPage() {
         title="International Phone Number Validation by Country | NumIntel"
         description="Browse phone number validation rules, calling codes, and numbering plans for countries worldwide."
         path="/numintel/countries"
+        pageType="CollectionPage"
       />
       
       <section className="page-hero">

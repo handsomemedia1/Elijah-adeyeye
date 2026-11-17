@@ -1,7 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import './styles/global.css' // Import global CSS here
+import '@fontsource-variable/bricolage-grotesque'
+import '@fontsource-variable/geist'
+import '@fontsource-variable/geist-mono'
+import './styles/global.css'
+
+// Lets CSS keep content visible when JavaScript isn't running.
+document.documentElement.classList.add('js')
 
 const container = document.getElementById('root')
 const app = (

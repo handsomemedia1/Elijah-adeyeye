@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 
 // Eagerly loaded — critical for SEO prerender
@@ -12,7 +12,6 @@ import ResearchCategoryPage from './pages/ResearchCategoryPage';
 
 import LabPage from './pages/LabPage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
-import WritingPage from './pages/WritingPage';
 import BlogPage from './pages/BlogPage';
 import BlogRedirect from './pages/BlogRedirect';
 import ElitechPage from './pages/ElitechPage';
@@ -61,7 +60,7 @@ export default function AppRoutes() {
           <Route path="numintel/guides" element={<GuideListPage />} />
           <Route path="numintel/guides/:guideSlug" element={<GuidePage />} />
 
-          <Route path="writing" element={<WritingPage />} />
+          <Route path="writing" element={<Navigate to="/blog" replace />} />
           <Route path="blog" element={<BlogPage />} />
           <Route path="blog/:slug" element={<BlogRedirect />} />
           <Route path="cv" element={<CVPage />} />

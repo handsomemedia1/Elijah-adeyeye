@@ -17,7 +17,7 @@ export default function ElitechPage() {
         path="/elitech"
       />
       <section className="page-hero">
-        <div className="mesh-background" style={{ backgroundImage: "url('/assets/images/backgrounds/hero_bg_writing_1776720496242.png')", backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.3, filter: 'brightness(0.6) contrast(1.2)' }} />
+        <div className="mesh-background" style={{ backgroundImage: "url('/assets/images/backgrounds/hero_bg_writing_1776720496242.webp')", backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.3, filter: 'brightness(0.6) contrast(1.2)' }} />
         <div className="container page-hero__inner">
           <span className="section-header__label">Company</span>
           <h1 className="page-hero__title">

@@ -1,0 +1,139 @@
+/* ============================================
+   TYPE POLISH, MOTION & SMOOTH SCROLLING
+   ============================================ */
+
+/* ── Typography polish ── */
+h1, h2, h3 {
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+  font-variation-settings: 'wdth' 100;
+}
+
+h1 { letter-spacing: -0.035em; }
+
+p, li {
+  text-wrap: pretty;
+}
+
+body {
+  font-feature-settings: 'ss01', 'cv11';
+  text-rendering: optimizeLegibility;
+}
+
+.mono,
+code,
+kbd {
+  font-family: var(--font-mono);
+  font-feature-settings: 'zero';
+}
+
+/* ── Smooth scrolling (Lenis drives it when JS is on; the browser otherwise) ── */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+html.lenis {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* ── Focus rings for keyboard users ── */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Reading progress bar (CSS only; hidden where scroll timelines aren't supported) ── */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: calc(var(--z-sticky) + 1);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-highlight));
+  pointer-events: none;
+  display: none;
+}
+
+@supports (animation-timeline: scroll()) {
+  .scroll-progress {
+    display: block;
+    animation: scrollProgress linear both;
+    animation-timeline: scroll(root block);
+  }
+}
+
+@keyframes scrollProgress {
+  to { transform: scaleX(1); }
+}
+
+/* ── Route transitions: only after the first navigation, so the first paint isn't delayed ── */
+.route-enter {
+  animation: routeEnter 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes routeEnter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+/* ── Staggered reveal for grids ── */
+.stagger > * {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.stagger.visible > * {
+  opacity: 1;
+  transform: none;
+}
+
+.stagger.visible > *:nth-child(2) { transition-delay: 60ms; }
+.stagger.visible > *:nth-child(3) { transition-delay: 120ms; }
+.stagger.visible > *:nth-child(4) { transition-delay: 180ms; }
+.stagger.visible > *:nth-child(5) { transition-delay: 240ms; }
+.stagger.visible > *:nth-child(6) { transition-delay: 300ms; }
+.stagger.visible > *:nth-child(n+7) { transition-delay: 340ms; }
+
+/* Content stays visible without JavaScript (search engines, no-JS readers). */
+html:not(.js) .reveal,
+html:not(.js) .reveal-left,
+html:not(.js) .reveal-right,
+html:not(.js) .reveal-scale,
+html:not(.js) .stagger > * {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Respect reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .scroll-progress {
+    display: none;
+  }
+}

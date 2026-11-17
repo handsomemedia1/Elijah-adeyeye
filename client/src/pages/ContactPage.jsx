@@ -84,9 +84,10 @@ export default function ContactPage() {
         title="Contact Elijah Adeyeye"
         description="Get in touch for research collaboration, speaking engagements, or cybersecurity consulting."
         path="/contact"
+        pageType="ContactPage"
       />
       <section className="page-hero">
-        <div className="mesh-background" style={{ backgroundImage: "url('/assets/images/backgrounds/hero_bg_home_1776720190044.png')", backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.3, filter: 'brightness(0.6) contrast(1.2)' }} />
+        <div className="mesh-background" style={{ backgroundImage: "url('/assets/images/backgrounds/hero_bg_home_1776720190044.webp')", backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.3, filter: 'brightness(0.6) contrast(1.2)' }} />
         <div className="container page-hero__inner">
           <span className="section-header__label">Get In Touch</span>
           <h1 className="page-hero__title">Let's <span className="gradient-text">Connect</span></h1>

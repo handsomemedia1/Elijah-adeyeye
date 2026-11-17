@@ -4,9 +4,10 @@ import { HiArrowRight, HiExternalLink, HiStar } from 'react-icons/hi';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useCountUp } from '../hooks/useCountUp';
 import { useElitechBlogs } from '../hooks/useElitechBlogs';
+import BlogCard from '../components/BlogCard';
 import {
   siteConfig, publications, aboutSnippet,
-  featuredProjects, researchInterests, elitechPostUrl, elitechImageUrl
+  featuredProjects, researchInterests
 } from '../data/siteData';
 import './HomePage.css';
 
@@ -69,7 +70,6 @@ function ProjectCard({ project }) {
 export default function HomePage() {
   const { posts: personalPosts, loading: postsLoading } = useElitechBlogs(3);
 
-  const [heroRef, heroVisible] = useScrollReveal({ threshold: 0.1 });
   const [aboutRef, aboutVisible] = useScrollReveal();
   const [ctaRef, ctaVisible] = useScrollReveal();
 
@@ -79,18 +79,12 @@ export default function HomePage() {
         title={`${siteConfig.name} | ${siteConfig.title}`}
         description={siteConfig.descriptor}
         path="/"
-        jsonLd={[{
-          '@context': 'https://schema.org',
-          '@type': 'WebSite',
-          name: siteConfig.name,
-          url: 'https://elijahadeyeye.vercel.app',
-        }]}
       />
       {/* ── HERO SECTION ── */}
-      <section className="hero" ref={heroRef}>
+      <section className="hero">
         <div className="hero__bg-image" style={{ opacity: 0.1 }} />
         <div className="hero__content container">
-          <div className={`hero__text ${heroVisible ? 'visible' : ''}`}>
+          <div className="hero__text hero--instant">
             <h1 className="hero__name">
               Elijah Adeyeye
             </h1>
@@ -111,7 +105,7 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <div className={`hero__image ${heroVisible ? 'visible' : ''}`}>
+          <div className="hero__image hero--instant">
             <div className="hero__photo-wrapper" style={{ boxShadow: 'none' }}>
               <img src="/assets/images/profile/profile.jpg" alt="Elijah Adeyeye" className="hero__photo" />
             </div>
@@ -206,7 +200,7 @@ export default function HomePage() {
       <section className="section home__writing">
         <div className="container">
           <div className="section-header">
-            <span className="section-header__label">Writing & Insights</span>
+            <span className="section-header__label">Blog</span>
             <h2 className="section-header__title">Latest Articles</h2>
             <div className="accent-line" />
           </div>
@@ -214,23 +208,7 @@ export default function HomePage() {
             {postsLoading ? (
               <div style={{ color: 'var(--text-tertiary)' }}>Loading recent posts...</div>
             ) : personalPosts && personalPosts.length > 0 ? (
-              personalPosts.slice(0, 3).map(post => (
-                <a key={post.id} href={elitechPostUrl(post.slug)} target="_blank" rel="noopener noreferrer" className="writing__elitech-card glass" style={{ height: '100%', textDecoration: 'none' }}>
-                  {post.thumbnail && (
-                    <div className="writing__elitech-card-thumb" style={{ aspectRatio: '16/9', overflow: 'hidden' }}>
-                      <img src={elitechImageUrl(post.thumbnail)} alt={post.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    </div>
-                  )}
-                  <div className="writing__elitech-card-body" style={{ padding: 'var(--space-5)', display: 'flex', flexDirection: 'column', gap: 'var(--space-2)', flexGrow: 1 }}>
-                    <span className="post-card__tag" style={{ color: 'var(--color-primary)', fontSize: 'var(--text-xs)', fontWeight: 'var(--weight-bold)' }}>{post.category || 'Blog'}</span>
-                    <h3 className="writing__elitech-card-title" style={{ color: 'var(--text-primary)', fontSize: 'var(--text-lg)', fontWeight: 'var(--weight-bold)', lineHeight: 'var(--leading-snug)' }}>{post.title}</h3>
-                    <p className="writing__elitech-card-excerpt" style={{ color: 'var(--text-secondary)', fontSize: 'var(--text-sm)', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{post.excerpt}</p>
-                    <div className="post-card__meta" style={{ marginTop: 'auto', paddingTop: 'var(--space-4)', fontSize: 'var(--text-xs)', color: 'var(--text-tertiary)' }}>
-                      <span>{new Date(post.published_at).toLocaleDateString('en-US', { timeZone: 'UTC', month: 'short', day: 'numeric', year: 'numeric' })}</span>
-                    </div>
-                  </div>
-                </a>
-              ))
+              personalPosts.slice(0, 3).map(post => <BlogCard key={post.id} post={post} />)
             ) : (
               <div style={{ color: 'var(--text-tertiary)' }}>No recent posts available.</div>
             )}
