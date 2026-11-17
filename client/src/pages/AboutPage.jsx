@@ -31,12 +31,13 @@ export default function AboutPage() {
     <div className="about page-enter">
       <SEO
         title="About Elijah Adeyeye"
-        description="B.Ed University of Ibadan. Certified Counselling Psychologist and Elitech Hub Founder. Background in Guidance & Counselling with advanced cybersecurity certifications."
+        description="Elijah Adeyeye: B.Ed University of Ibadan, certified counselling psychologist, founder of Elitech Hub, with advanced cybersecurity certifications."
         path="/about"
+        pageType="ProfilePage"
       />
       {/* Page Header */}
       <section className="page-hero">
-        <div className="mesh-background" style={{ backgroundImage: "url('/assets/images/backgrounds/hero_bg_about_1776720215519.png')", backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.3, filter: 'brightness(0.6) contrast(1.2)' }} />
+        <div className="mesh-background" style={{ backgroundImage: "url('/assets/images/backgrounds/hero_bg_about_1776720215519.webp')", backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.3, filter: 'brightness(0.6) contrast(1.2)' }} />
         <div className="container page-hero__inner">
           <span className="section-header__label">About</span>
           <h1 className="page-hero__title">About <span className="gradient-text">Elijah</span></h1>
@@ -98,7 +99,7 @@ export default function AboutPage() {
           <div className={`about__cred-grid ${credVisible ? 'visible' : ''}`}>
             {researchCredentials.map((cred, i) => (
               <div key={i} className="cred-card glass">
-                <span className={`pub-card__badge ${cred.status === 'Accepted' ? 'badge--accepted' : 'badge--review'}`}>
+                <span className={`pub-card__badge ${cred.status === 'Accepted' ? 'badge--accepted' : cred.status === 'Published' ? 'badge--published' : 'badge--review'}`}>
                   {cred.status}
                 </span>
                 <h3 className="cred-card__title">{cred.title}</h3>

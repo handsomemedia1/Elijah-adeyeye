@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import DOMPurify from 'dompurify';
 import { supabase } from '../../lib/supabase';
 import {
   HiPlus, HiPencil, HiTrash, HiExternalLink, HiEye,
@@ -353,7 +354,7 @@ export default function ManageWriting() {
             <div
               className="admin-preview-body"
               style={{ fontSize: '1rem', lineHeight: 1.8, color: 'var(--text-secondary)' }}
-              dangerouslySetInnerHTML={{ __html: form.body || '<p style="color:var(--text-tertiary)">Start writing to see the preview...</p>' }}
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(form.body) || '<p style="color:var(--text-tertiary)">Start writing to see the preview...</p>' }}
             />
           </div>
         )}

@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import SEO from '../../components/SEO';
+import { absoluteUrl, PERSON_ID } from '../../config/site';
 import { numintelGuides } from '../../data/numintelGuides';
 import '../NumIntelPage.css';
 
@@ -19,10 +20,23 @@ export default function GuidePage() {
   return (
     <div className="numintel page-enter">
       <SEO
-        title={`${guide.title} | NumIntel Guides`}
+        title={`${guide.title} | NumIntel`}
         description={guide.description}
         path={`/numintel/guides/${guide.slug}`}
         type="article"
+        jsonLd={[{
+          '@type': 'TechArticle',
+          '@id': `${absoluteUrl(`/numintel/guides/${guide.slug}`)}#article`,
+          headline: guide.title,
+          description: guide.description,
+          dateModified: guide.lastUpdated,
+          url: absoluteUrl(`/numintel/guides/${guide.slug}`),
+          mainEntityOfPage: { '@id': `${absoluteUrl(`/numintel/guides/${guide.slug}`)}#webpage` },
+          inLanguage: 'en-GB',
+          author: { '@id': PERSON_ID },
+          publisher: { '@id': PERSON_ID },
+          isPartOf: { '@id': `${absoluteUrl('/numintel')}#app` },
+        }]}
       />
       
       <section className="page-hero">

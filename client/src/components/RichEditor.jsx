@@ -1,4 +1,5 @@
 import { useRef, useCallback } from 'react';
+import DOMPurify from 'dompurify';
 import {
   HiOutlinePhotograph, HiOutlineLink
 } from 'react-icons/hi';
@@ -108,7 +109,7 @@ export default function RichEditor({ value, onChange, placeholder }) {
         contentEditable
         onInput={handleInput}
         onPaste={handlePaste}
-        dangerouslySetInnerHTML={{ __html: value || '' }}
+        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(value || '') }}
         data-placeholder={placeholder || 'Start writing...'}
         suppressContentEditableWarning
       />

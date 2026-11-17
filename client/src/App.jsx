@@ -4,8 +4,17 @@ import { HelmetProvider } from 'react-helmet-async';
 import { AuthProvider } from './contexts/AuthContext';
 import { usePageTracker } from './hooks/usePageTracker';
 import AppRoutes from './AppRoutes';
+import SmoothScroll from './components/SmoothScroll';
 
 import { InitialDataProvider } from './contexts/InitialDataContext';
+
+/** Posts embedded at build time. Stored as JSON so the security policy can block inline scripts. */
+function readInitialData() {
+  const element = document.getElementById('initial-data');
+  return element ? JSON.parse(element.textContent) : null;
+}
+
+const initialData = readInitialData();
 
 function PageTracker() {
   usePageTracker();
@@ -17,8 +26,6 @@ const PageFallback = () => (
 );
 
 function App() {
-  const initialData = typeof window !== 'undefined' ? window.__INITIAL_DATA__ : null;
-
   useEffect(() => {
     const loader = document.getElementById('initial-loader');
     if (loader) {
@@ -36,6 +43,7 @@ function App() {
         <InitialDataProvider data={initialData}>
           <BrowserRouter>
             <PageTracker />
+            <SmoothScroll />
             <Suspense fallback={<PageFallback />}>
               <AppRoutes />
             </Suspense>

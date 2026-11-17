@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { HiClipboardCopy, HiCheck, HiPhone, HiGlobe, HiIdentification, HiDocumentDuplicate } from 'react-icons/hi';
 import { FaWhatsapp } from 'react-icons/fa6';
+import { absoluteUrl } from '../../config/site';
 
 export default function ResultCard({ result }) {
   const [copied, setCopied] = useState(false);
@@ -18,7 +19,7 @@ Carrier: ${result.carrier?.name || 'Unknown'}
 Score: ${result.score}/100
 Valid: ${result.isValid ? 'Yes' : 'Unverified'}
 Reports: ${result.reportCount}
-View more at https://elijahadeyeye.vercel.app/numintel`;
+View more at ${absoluteUrl('/numintel')}`;
     navigator.clipboard.writeText(reportText);
     setCopiedReport(true);
     setTimeout(() => setCopiedReport(false), 2000);

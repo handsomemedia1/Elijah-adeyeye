@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import { absoluteUrl, PERSON_ID } from '../config/site';
 import { publications, researchInterests } from '../data/siteData';
 import { HiArrowLeft, HiExternalLink, HiClipboardCopy, HiCheck } from 'react-icons/hi';
 import { useState, useEffect } from 'react';
@@ -33,40 +34,33 @@ export default function PublicationDetailPage() {
   };
 
   const articleSchema = {
-    '@context': 'https://schema.org',
     '@type': 'ScholarlyArticle',
+    '@id': `${absoluteUrl(`/publications/${publication.slug}`)}#article`,
     headline: publication.title,
-    author: publication.authors.map(author => ({
-      '@type': 'Person',
-      name: author
-    })),
+    author: publication.authors.map(author => (
+      author === publication.highlightedAuthor ? { '@id': PERSON_ID } : { '@type': 'Person', name: author }
+    )),
+    abstract: publication.abstract,
+    inLanguage: 'en',
     datePublished: publication.publishedDate || publication.submitted,
     publisher: {
       '@type': 'Organization',
       name: publication.publisher
     },
     identifier: publication.doi ? `doi:${publication.doi}` : undefined,
-    url: `https://elijahadeyeye.vercel.app/publications/${publication.slug}`
+    sameAs: publication.doi ? `https://doi.org/${publication.doi}` : undefined,
+    url: absoluteUrl(`/publications/${publication.slug}`),
   };
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://elijahadeyeye.vercel.app' },
-      { '@type': 'ListItem', position: 2, name: 'Publications', item: 'https://elijahadeyeye.vercel.app/publications' },
-      { '@type': 'ListItem', position: 3, name: publication.title, item: `https://elijahadeyeye.vercel.app/publications/${publication.slug}` }
-    ]
-  };
 
   return (
     <div className="pub-detail page-enter">
       <SEO
-        title={`${publication.title} — Publication`}
-        description={publication.abstract.substring(0, 160)}
+        title={publication.title}
+        description={publication.abstract}
         path={`/publications/${publication.slug}`}
         type="article"
-        jsonLd={[articleSchema, breadcrumbSchema]}
+        jsonLd={[articleSchema]}
       />
       <section className="section">
         <div className="container pub-detail__inner">
@@ -126,6 +120,9 @@ export default function PublicationDetailPage() {
                   <li><strong>Date:</strong> {publication.date || publication.publishedDate || publication.submitted}</li>
                   {publication.doi && (
                     <li><strong>DOI:</strong> <a href={`https://doi.org/${publication.doi}`} target="_blank" rel="noopener noreferrer">{publication.doi} <HiExternalLink /></a></li>
+                  )}
+                  {publication.correctionDoi && (
+                    <li><strong>Correction:</strong> <a href={`https://doi.org/${publication.correctionDoi}`} target="_blank" rel="noopener noreferrer">{publication.correctionDoi} <HiExternalLink /></a></li>
                   )}
                   {publication.manuscriptId && <li><strong>Manuscript ID:</strong> {publication.manuscriptId}</li>}
                   {publication.abstractId && <li><strong>Abstract ID:</strong> {publication.abstractId}</li>}

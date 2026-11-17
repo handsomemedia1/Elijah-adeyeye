@@ -15,6 +15,7 @@ export default function GuideListPage() {
         title="Phone Number Intelligence Guides & Articles | NumIntel"
         description="Learn about E.164, phone number formatting, telecom routing, and validation technologies."
         path="/numintel/guides"
+        pageType="CollectionPage"
       />
       
       <section className="page-hero">

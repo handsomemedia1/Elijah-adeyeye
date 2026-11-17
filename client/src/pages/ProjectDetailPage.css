@@ -62,6 +62,19 @@
   margin-bottom: var(--space-6);
 }
 
+.project-detail__list {
+  list-style: disc;
+  padding-left: var(--space-6);
+  margin-bottom: var(--space-6);
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--text-secondary);
+}
+
+.project-detail__list li + li {
+  margin-top: var(--space-2);
+}
+
 .project-detail__tech {
   display: flex;
   flex-wrap: wrap;

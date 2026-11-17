@@ -19,12 +19,38 @@ export default function CountryPage() {
 
   const related = numintelCountries.filter(c => country.relatedCountries.includes(c.slug));
 
+  // Answers built only from this country's data, shown on the page and repeated as FAQ structured data.
+  const faqs = [
+    {
+      q: `What is the country code for ${country.name}?`,
+      a: `The international calling code for ${country.name} is ${country.callingCode}. A number in international format looks like ${country.internationalFormatExample}.`,
+    },
+    {
+      q: `How do I write a ${country.name} phone number in international format?`,
+      a: `Put ${country.callingCode} in front of the national number and drop a leading 0 trunk prefix if it has one. For example, ${country.nationalFormatExample} becomes ${country.internationalFormatExample}.`,
+    },
+    country.mobilePrefixes?.length && {
+      q: `What do ${country.name} mobile numbers start with?`,
+      a: `In national format, ${country.name} mobile numbers commonly start with ${country.mobilePrefixes.join(', ')}.`,
+    },
+    country.commonFormattingMistakes && {
+      q: `What is a common mistake when formatting ${country.name} numbers?`,
+      a: country.commonFormattingMistakes,
+    },
+  ].filter(Boolean);
+
+  const faqSchema = {
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+  };
+
   return (
     <div className="numintel page-enter">
       <SEO
         title={`${country.name} Phone Number Validator & Formatter | NumIntel`}
         description={`Validate ${country.name} phone numbers. Learn the numbering plan, calling code (${country.callingCode}), and correct E.164 formatting.`}
         path={`/numintel/countries/${country.slug}`}
+        jsonLd={[faqSchema]}
       />
       
       <section className="page-hero">
@@ -98,6 +124,16 @@ export default function CountryPage() {
             <p style={{ marginTop: 'var(--space-6)', fontSize: '0.8rem', color: 'var(--color-text-light)' }}>
               Last verified: {country.lastVerified}
             </p>
+          </div>
+
+          <div className="ni-faq">
+            <h2>{country.name} phone numbers: common questions</h2>
+            {faqs.map(({ q, a }) => (
+              <details key={q} className="ni-faq__item">
+                <summary>{q}</summary>
+                <p>{a}</p>
+              </details>
+            ))}
           </div>
 
           {related.length > 0 && (

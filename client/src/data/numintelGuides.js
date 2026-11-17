@@ -73,7 +73,7 @@ export const numintelGuides = [
 <p>The most common error in international formatting is keeping the trunk prefix.</p>
 <p>If a user in Kenya gives their number as <code>0712 345 678</code>, someone dialing from London should dial <code>+254 712 345 678</code>. If they dial <code>+254 0712...</code>, the call will likely fail because the telecom switch gets confused by the extra zero.</p>
     `,
-    relatedTools: ['/numintel/country-code-lookup', '/numintel/countries'],
+    relatedTools: ['/numintel/international-phone-number-validator', '/numintel/countries'],
     lastUpdated: '2026-09-08'
   }
 ];

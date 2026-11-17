@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../../components/SEO';
+import { absoluteUrl, PERSON_ID } from '../../config/site';
 import NumIntelTool from '../../components/numintel/NumIntelTool';
 import LeaderBoard from '../../components/numintel/LeaderBoard';
 import { useReports } from '../../hooks/useReports';
@@ -20,6 +21,21 @@ export default function NumIntelLanding() {
         title="NumIntel — International Phone Number Intelligence"
         description="Validate, format and understand phone numbers across international numbering systems. Privacy-first phone intelligence."
         path="/numintel"
+        jsonLd={[{
+          '@type': 'WebApplication',
+          '@id': `${absoluteUrl('/numintel')}#app`,
+          name: 'NumIntel',
+          url: absoluteUrl('/numintel'),
+          description: 'Validate, format and understand phone numbers across international numbering systems.',
+          applicationCategory: 'UtilitiesApplication',
+          applicationSubCategory: 'Phone number validation',
+          operatingSystem: 'Any (web browser)',
+          browserRequirements: 'Requires JavaScript',
+          isAccessibleForFree: true,
+          offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+          featureList: ['Phone number validation', 'E.164 formatting', 'International and national formats', 'Country and line type detection'],
+          author: { '@id': PERSON_ID },
+        }]}
       />
       
       <section className="page-hero">

@@ -9,7 +9,7 @@ export const numintelCountries = [
     nationalFormatExample: '0803 123 4567',
     mobilePrefixes: ['070', '080', '081', '090', '091'],
     fixedLineInformation: 'Area codes (1 to 2 digits) followed by 7-digit subscriber numbers. E.g., Lagos is 01.',
-    validationNotes: 'A valid Nigerian mobile number in international format must have exactly 13 characters (including the +).',
+    validationNotes: 'A valid Nigerian mobile number in international format is +234 followed by 10 digits: 14 characters including the +.',
     commonFormattingMistakes: 'Dropping the leading zero is correct for international format (e.g., +234 803...), but commonly misunderstood by users who try to dial +234 0803...',
     relatedCountries: ['ghana', 'kenya', 'south-africa'],
     lastVerified: '2026-09-08',
